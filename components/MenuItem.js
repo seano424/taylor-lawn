@@ -43,7 +43,7 @@ const MenuItem = ({ i, text }) => {
         className={`rounded-md flex-1 px-3 py-1 hover:text-green-600 uppercase font-bold tracking-widest`}
         style={style}
       >
-        {text}
+        <a href="/">{text}</a>
       </div>
     </motion.li>
   )

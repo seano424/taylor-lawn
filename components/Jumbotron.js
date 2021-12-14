@@ -46,14 +46,14 @@ function Jumbotron({ banner }) {
     hidden: { y: 400 },
     show: {
       y: 0,
-      transition: { duration: 1.2, ease: [0.17, 0.67, 0.83, 0.67] },
+      transition: { duration: 1.2, ease: 'backInOut' },
     },
   }
   const button2 = {
     hidden: { y: 400 },
     show: {
       y: 0,
-      transition: { duration: 1.5, ease: [0.17, 0.67, 0.83, 0.67] },
+      transition: { duration: 1.5, ease: 'backInOut' },
     },
   }
 
