@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { useRef } from 'react'
-import { motion, useCycle } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 import useDimensions from '../hooks/use-dimension'
 import MenuToggle from './MenuToggle'
 import Navigation from './Navigation'
+import useOutsideClick from '../hooks/use-outside-click'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -26,21 +27,25 @@ const sidebar = {
 }
 
 const Example = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true)
+  const [open, setOpen] = useState(false)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
+
+  useOutsideClick(containerRef, () => {
+    setOpen(false)
+  })
 
   return (
     <motion.nav
       className="nav"
       initial={false}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={open ? 'open' : 'closed'}
       custom={height}
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
+      <MenuToggle toggle={() => setOpen((prevState) => !prevState)} />
     </motion.nav>
   )
 }

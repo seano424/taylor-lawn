@@ -9,7 +9,7 @@ import { FaFacebook } from 'react-icons/fa'
 import Image from 'next/image'
 import Example from './Example'
 
-function Navbar() {
+function Header() {
   const { route } = useRouter()
   return (
     <>
@@ -80,4 +80,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Header

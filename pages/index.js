@@ -1,18 +1,12 @@
-import Head from 'next/head'
 import { getBanner } from '../lib/api'
-import Navbar from '../components/Navbar'
+import Layout from '../components/Layout'
 import Jumbotron from '../components/Jumbotron'
 
 export default function Home({ banner }) {
   return (
-    <div>
-      <Head>
-        <title>Taylor Lawn</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
+    <Layout>
       <Jumbotron banner={banner} />
-    </div>
+    </Layout>
   )
 }
 

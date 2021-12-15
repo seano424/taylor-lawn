@@ -53,7 +53,10 @@ function Jumbotron({ banner }) {
     hidden: { y: 400 },
     show: {
       y: 0,
-      transition: { duration: 1.5, ease: 'backInOut' },
+      transition: {
+        duration: 1.4,
+        ease: 'backInOut',
+      },
     },
   }
 

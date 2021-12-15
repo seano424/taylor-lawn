@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from './Navbar'
+import Header from './Header'
 
 function Layout({ children }) {
   return (
@@ -8,7 +8,7 @@ function Layout({ children }) {
         <title>Taylor Lawn & Landscaping</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+      <Header />
       <main>{children}</main>
     </div>
   )
