@@ -26,7 +26,7 @@ const sidebar = {
   },
 }
 
-const Example = () => {
+const Sidebar = () => {
   const [open, setOpen] = useState(false)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
@@ -50,4 +50,4 @@ const Example = () => {
   )
 }
 
-export default Example
+export default Sidebar

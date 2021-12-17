@@ -7,16 +7,17 @@ import {
 } from '@heroicons/react/solid'
 import { FaFacebook } from 'react-icons/fa'
 import Image from 'next/image'
-import Example from './Example'
+import Sidebar from './Sidebar'
+import { scrollTo } from '../utils/scrollTo'
 
 function Header() {
   const { route } = useRouter()
   return (
     <>
       <div className="z-50 absolute  lg:hidden">
-        <Example />
+        <Sidebar />
       </div>
-      <div className="hidden lg:inline-flex absolute z-10 w-full bg-white px-8 xl:px-20 py-2">
+      <div className="hidden lg:inline-flex absolute z-10 w-full bg-white px-8 xl:px-20 py-3">
         <div className="flex items-center">
           {/* Image Section Left*/}
           <section className="hidden lg:inline-flex">
@@ -24,7 +25,7 @@ function Header() {
           </section>
           {/* Navbar Section Right */}
           <section className="w-full ml-10">
-            <div className="hidden lg:flex justify-between w-full gap-10 border-b border-opacity-40  py-4 text-green-700 font-thin">
+            <div className="hidden lg:flex justify-between w-full gap-8 border-b border-opacity-40  py-4 text-green-700 font-thin">
               <div className="flex items-center space-x-12">
                 <div className="flex items-center gap-2">
                   <PhoneIcon className="h-6" />
@@ -40,7 +41,7 @@ function Header() {
                 </div>
                 <div className="flex items-center gap-2">
                   <LocationMarkerIcon className="h-6" />
-                  <span>Shawnee, Kansas</span>
+                  <span>Kansas City Metro Area</span>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -63,7 +64,9 @@ function Header() {
                 <a href="/" className={route === '/' && 'text-green-800'}>
                   Home
                 </a>
-                <a href="/">About</a>
+                <a className="cursor-pointer" onClick={() => scrollTo('about')}>
+                  About
+                </a>
                 <a href="/">Services</a>
                 <a href="/">Gallery</a>
                 <a href="/">Testimonials</a>

@@ -1,7 +1,10 @@
+import { useContext } from 'react'
 import Head from 'next/head'
 import Header from './Header'
+import { ModalContext } from '../context/ModalContext'
 
 function Layout({ children }) {
+  const { showModal } = useContext(ModalContext)
   return (
     <div>
       <Head>
@@ -9,7 +12,7 @@ function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main className="relative">{children}</main>
     </div>
   )
 }
