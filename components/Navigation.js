@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import MenuItem from './MenuItem'
+import { useRouter } from 'next/router'
 
 const variants = {
   open: {
@@ -11,21 +12,49 @@ const variants = {
   },
 }
 
-const Navigation = () => (
-  <motion.ul className="menu-ul" variants={variants}>
-    {menuItems.map((item, idx) => (
-      <MenuItem i={idx} text={item} key={idx} />
-    ))}
-  </motion.ul>
-)
+const header = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 },
+    },
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+    },
+  },
+}
+
+const Navigation = ({ open, toggle }) => {
+  const router = useRouter()
+
+  const handleHeader = () => {
+    router.push('/')
+    toggle()
+  }
+
+  return (
+    <motion.ul className={`menu-ul ${!open && 'hidden'}`} variants={variants}>
+      <motion.h1
+        onClick={handleHeader}
+        variants={header}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="rounded-md flex-1 py-4 text-lg text-sky-900 hover:text-green-600 uppercase font-black tracking-widest font-sans cursor-pointer"
+      >
+        Taylor Lawn & Landscaping
+      </motion.h1>
+      {menuItems.map((item, idx) => (
+        <MenuItem i={idx} text={item} key={idx} />
+      ))}
+    </motion.ul>
+  )
+}
 
 export default Navigation
 
-const menuItems = [
-  'home',
-  'about',
-  'services',
-  'contact',
-  'gallery',
-  'testimonials',
-]
+const menuItems = ['about', 'services', 'contact', 'gallery', 'testimonials']

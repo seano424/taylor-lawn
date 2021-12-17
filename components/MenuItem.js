@@ -40,7 +40,7 @@ const MenuItem = ({ i, text }) => {
       whileTap={{ scale: 0.95 }}
     >
       <div
-        className={`rounded-md flex-1 px-3 py-1 hover:text-green-600 uppercase font-bold tracking-widest`}
+        className={`rounded-md flex-1 py-1 hover:text-green-600 uppercase font-bold tracking-widest`}
         style={style}
       >
         <a href="/">{text}</a>

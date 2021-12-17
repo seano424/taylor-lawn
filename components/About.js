@@ -7,7 +7,7 @@ function About({ about }) {
   console.log(about)
   const { bio1, bio2, image } = about
   return (
-    <div name="about" className="px-20 py-20 text-center">
+    <div name="about" className="px-20 py-20 text-center bg-gray-50">
       <div className="pb-8 md:pb-16 flex flex-col gap-6">
         <h1 className="text-4xl md:text-6xl font-black text-green-900 ">
           Taylor Lawn & Landscaping, L.L.C.

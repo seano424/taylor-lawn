@@ -52,14 +52,9 @@ function Gallery({ gallery }) {
             </li>
           </ul>
           <div className="flex gap-8 items-center">
-            <motion.div
-              variants={container}
-              initial="hidden"
-              animate="visible"
-              className="grid w-full md:grid-cols-3 gap-8"
-            >
+            <motion.div className="grid w-full md:grid-cols-3 gap-8">
               {images.slice(0, 6).map((i, idx) => (
-                <Card key={i._key} i={i} idx={idx} variants={item} />
+                <Card key={i._key} i={i} idx={idx} />
               ))}
             </motion.div>
           </div>
