@@ -38,11 +38,11 @@ function Card({ i, idx, variants }) {
         }`}
       >
         <Image
-          className="rounded object-cover"
+          className="rounded object-cover group-hover:scale-105 transition duration-200 ease-linear"
           src={urlFor(i.image).url()}
           layout="fill"
         />
-        <div className="absolute h-full w-full group-hover:bg-lime-300 group-hover:bg-opacity-20 group-hover:shadow-lg transition duration-200" />
+        <div className="absolute h-full w-full group-hover:shadow-xl group-hover:bg-gray-100 group-hover:bg-opacity-5 transition duration-200 ease-linear" />
       </motion.div>
       <AnimatePresence>
         {open && (
