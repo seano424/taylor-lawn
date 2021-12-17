@@ -1,12 +1,13 @@
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { urlFor } from '../lib/client'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useDisableBodyScroll } from '../hooks/use-disable-body'
 
 function Card({ i, idx, variants }) {
   const [open, setOpen] = useState(false)
   const [clickedIdx, setClickedIdx] = useState(0)
-  const containerRef = useRef()
+  useDisableBodyScroll(open)
 
   const handleShowModal = (i, idx) => {
     setOpen((prevState) => !prevState)
@@ -43,7 +44,6 @@ function Card({ i, idx, variants }) {
             transition={{ duration: 0.25, delay: 0.25 }}
             style={{ pointerEvents: 'auto' }}
             style={{ pointerEvents: 'auto' }}
-            ref={containerRef}
             onClick={() => handleShowModal(i, idx)}
             className="bg-white bg-opacity-90 fixed top-0 left-0 right-0 bottom-0 z-50"
           >
