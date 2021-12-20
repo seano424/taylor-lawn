@@ -61,7 +61,7 @@ function Jumbotron({ banner }) {
   }
 
   return (
-    <div className="relative h-screen">
+    <div name="home" className="relative h-screen">
       <Image className="object-cover" src={urlFor(image).url()} layout="fill" />
       <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
         <div className="max-w-7xl inline-flex flex-col gap-7 md:mt-20 lg:mt-64">
@@ -84,7 +84,7 @@ function Jumbotron({ banner }) {
               initial="hidden"
               animate="show"
               variants={button1}
-              className="rounded-full text-lg px-8 py-3 text-white border-white hover:bg-green-600 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300"
+              className="rounded-full text-lg px-8 py-3 text-white border-white hover:bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
             >
               Contact us
             </motion.button>
@@ -92,7 +92,7 @@ function Jumbotron({ banner }) {
               initial="hidden"
               animate="show"
               variants={button2}
-              className="text-green-600 text-lg bg-white rounded-full px-8 py-3 hover:bg-green-600 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300"
+              className="text-emerald-500 text-lg bg-white rounded-full px-8 py-3 hover:bg-emerald-500 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300 font-bold"
             >
               Request an Estimate
             </motion.button>

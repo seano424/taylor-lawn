@@ -1,14 +1,15 @@
-import { getBanner } from '../lib/api'
+import { getContent, getTestimonials } from '../lib/api'
 import Layout from '../components/Layout'
 import Jumbotron from '../components/Jumbotron'
 import About from '../components/About'
 import Gallery from '../components/Gallery'
+import Testimonials from '../components/Testimonials'
+import Footer from '../components/Footer'
 
-export default function Home({ content }) {
+export default function Home({ content, testimonials }) {
   const banner = content.find((item) => item._type === 'banner')
   const about = content.find((item) => item._type === 'about')
   const gallery = content.find((item) => item._type === 'gallery')
-  console.log(gallery)
   return (
     <Layout>
       <Jumbotron banner={banner} />
@@ -18,15 +19,18 @@ export default function Home({ content }) {
       {/* Gallery */}
       <Gallery gallery={gallery} />
       {/* Testimonials */}
-      <div className="bg-red-100 h-[900px] w-full" />
+      <Testimonials testimonials={testimonials} />
+      {/* Footer */}
+      <Footer />
     </Layout>
   )
 }
 
 export async function getStaticProps({ preview = false }) {
-  const content = await getBanner(preview)
+  const content = await getContent(preview)
+  const testimonials = await getTestimonials(preview)
   return {
-    props: { content: content },
+    props: { content: content, testimonials },
     revalidate: 1,
   }
 }

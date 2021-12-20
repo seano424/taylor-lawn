@@ -25,42 +25,40 @@ function Gallery({ gallery }) {
     },
   }
   return (
-    <>
-      <div className="relative">
-        <div className="px-10 bg-[#FBF9F5] py-16">
-          <h2 className="text-5xl text-green-700 font-sans font-semibold text-center ">
-            Latest Projects
-          </h2>
-          <ul className="flex justify-center gap-10 text-xl py-8 font-semibold">
-            <li
-              onClick={() => setImages(gallery.images)}
-              className={`hover:text-green-700 tracking-tight cursor-pointer`}
-            >
-              All
-            </li>
-            <li
-              onClick={() => setImages(softscapes)}
-              className={`hover:text-green-700 tracking-tight cursor-pointer`}
-            >
-              Softscapes
-            </li>
-            <li
-              onClick={() => setImages(hardscapes)}
-              className={`hover:text-green-700 tracking-tight cursor-pointer`}
-            >
-              Hardscapes
-            </li>
-          </ul>
-          <div className="flex gap-8 items-center">
-            <motion.div className="grid w-full md:grid-cols-3 gap-8">
-              {images.slice(0, 6).map((i, idx) => (
-                <Card key={i._key} i={i} idx={idx} />
-              ))}
-            </motion.div>
-          </div>
+    <div name="gallery" className="relative">
+      <div className="px-10 bg-[#FBF9F5] py-16">
+        <h2 className="text-5xl text-emerald-500 font-sans font-black tracking-tight text-center ">
+          Latest Projects
+        </h2>
+        <ul className="flex justify-center gap-10 text-xl py-8 font-semibold">
+          <li
+            onClick={() => setImages(gallery.images)}
+            className={`hover:text-emerald-500 tracking-tight cursor-pointer`}
+          >
+            All
+          </li>
+          <li
+            onClick={() => setImages(softscapes)}
+            className={`hover:text-emerald-500 tracking-tight cursor-pointer`}
+          >
+            Softscapes
+          </li>
+          <li
+            onClick={() => setImages(hardscapes)}
+            className={`hover:text-emerald-500 tracking-tight cursor-pointer`}
+          >
+            Hardscapes
+          </li>
+        </ul>
+        <div className="flex gap-8 items-center">
+          <motion.div className="grid w-full md:grid-cols-3 gap-8">
+            {images.slice(0, 6).map((i, idx) => (
+              <Card key={i._key} i={i} idx={idx} />
+            ))}
+          </motion.div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

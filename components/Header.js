@@ -25,7 +25,7 @@ function Header() {
           </section>
           {/* Navbar Section Right */}
           <section className="w-full ml-10">
-            <div className="hidden lg:flex justify-between w-full gap-8 border-b border-opacity-40  py-4 text-green-700 font-thin">
+            <div className="hidden lg:flex justify-between w-full gap-8 border-b border-opacity-40  py-4 text-emerald-500 font-thin">
               <div className="flex items-center space-x-12">
                 <div className="flex items-center gap-2">
                   <PhoneIcon className="h-6" />
@@ -37,7 +37,7 @@ function Header() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MailIcon className="h-6" />
-                  <span>office@example.com</span>
+                  <span>taylorlawn@hotmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <LocationMarkerIcon className="h-6" />
@@ -55,13 +55,13 @@ function Header() {
             </div>
             <nav className="flex items-center relative text-gray-800 text-lg pt-6">
               {/* <div className="flex w-80">
-          <a href="/" className="text-xl text-green-900">
+          <a href="/" className="text-xl text-emerald-500">
             Taylor Lawn & Landscaping
           </a>
         </div> */}
 
               <ul className="hidden lg:flex gap-8 items-center flex-1 justify-between">
-                <a href="/" className={route === '/' && 'text-green-800'}>
+                <a href="/" className={route === '/' && 'text-emerald-500'}>
                   Home
                 </a>
                 <a className="cursor-pointer" onClick={() => scrollTo('about')}>
@@ -71,7 +71,7 @@ function Header() {
                 <a href="/">Gallery</a>
                 <a href="/">Testimonials</a>
                 <a href="/">Contact</a>
-                <button className="bg-green-700 text-white font-thin rounded-full py-2 px-6 text-[15px] tracking-wide">
+                <button className="bg-emerald-500 text-white font-thin rounded-full py-2 px-6 text-[15px] tracking-wide">
                   Free Quote
                 </button>
               </ul>

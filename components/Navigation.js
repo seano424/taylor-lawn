@@ -44,12 +44,12 @@ const Navigation = ({ open, toggle }) => {
         variants={header}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="rounded-md flex-1 py-4 text-lg text-sky-900 hover:text-green-600 uppercase font-black tracking-widest font-sans cursor-pointer"
+        className="rounded-md flex-1 py-4 text-lg text-sky-900 hover:text-emerald-500 uppercase font-black tracking-widest font-sans cursor-pointer"
       >
         Taylor Lawn & Landscaping
       </motion.h1>
       {menuItems.map((item, idx) => (
-        <MenuItem i={idx} text={item} key={idx} />
+        <MenuItem toggle={toggle} i={idx} text={item} key={idx} />
       ))}
     </motion.ul>
   )

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
+import { scrollTo } from '../utils/scrollTo'
 
 const variants = {
   open: {
@@ -27,10 +28,14 @@ const colors = [
   '#99d98c',
 ]
 
-const MenuItem = ({ i, text }) => {
+const MenuItem = ({ i, text, toggle }) => {
   const style = {
     color: `${colors[i]}`,
     '&:hover': { background: colors[i] },
+  }
+  const handleClick = (text) => {
+    scrollTo(text)
+    toggle()
   }
   return (
     <motion.li
@@ -40,10 +45,10 @@ const MenuItem = ({ i, text }) => {
       whileTap={{ scale: 0.95 }}
     >
       <div
-        className={`rounded-md flex-1 py-1 hover:text-green-600 uppercase font-bold tracking-widest`}
+        className={`rounded-md flex-1 py-1 hover:text-emerald-500 uppercase font-bold tracking-widest`}
         style={style}
       >
-        <a href="/">{text}</a>
+        <a onClick={() => handleClick(text)}>{text}</a>
       </div>
     </motion.li>
   )
