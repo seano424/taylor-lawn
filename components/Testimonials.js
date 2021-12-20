@@ -5,16 +5,18 @@ function Testimonials({ testimonials }) {
   console.log('testimonials', testimonials)
 
   return (
-    <section className="flex flex-col gap-8 items-center py-20 px-10">
-      <h2 className="text-5xl mb-2 font-black text-emerald-500 font-sans">
+    <div>
+      <h2 className="text-5xl mb-2 font-black text-emerald-500 font-sans text-center py-10">
         Testimonials
       </h2>
-      <div className="grid lg:grid-cols-2 gap-12">
-        {testimonials.map((testimonial) => (
-          <Testimonial key={testimonial._id} testimonial={testimonial} />
-        ))}
-      </div>
-    </section>
+      <section className="flex flex-wrap overflow-scroll flex-col items-center scrollbar-hide">
+        <div className="flex gap-8 pb-20 px-10">
+          {testimonials.map((testimonial) => (
+            <Testimonial key={testimonial._id} testimonial={testimonial} />
+          ))}
+        </div>
+      </section>
+    </div>
   )
 }
 
