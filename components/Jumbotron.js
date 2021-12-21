@@ -2,8 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '../lib/client'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
 
 function Jumbotron({ banner }) {
+  const { push } = useRouter()
   const { image, subtitle } = banner
 
   const container = {
@@ -86,6 +88,7 @@ function Jumbotron({ banner }) {
           </h4>
           <div className="flex flex-col md:flex-row gap-3 justify-center">
             <motion.button
+              onClick={() => push('/contact')}
               initial="hidden"
               animate="show"
               variants={button1}
@@ -94,6 +97,7 @@ function Jumbotron({ banner }) {
               Contact us
             </motion.button>
             <motion.button
+              onClick={() => push('/contact')}
               initial="hidden"
               animate="show"
               variants={button2}
