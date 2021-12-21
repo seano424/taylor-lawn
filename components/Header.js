@@ -64,11 +64,36 @@ function Header() {
                 <a href="/" className={route === '/' && 'text-emerald-500'}>
                   Home
                 </a>
-                <a href="/about">About</a>
-                <a href="/">Services</a>
-                <a href="/gallery">Gallery</a>
-                <a href="/testimonials">Testimonials</a>
-                <a href="/contact">Contact</a>
+                <a
+                  className={route === '/about' && 'text-emerald-500'}
+                  href="/about"
+                >
+                  About
+                </a>
+                <a
+                  className={route === '/services' && 'text-emerald-500'}
+                  href="/"
+                >
+                  Services
+                </a>
+                <a
+                  className={route === '/gallery' && 'text-emerald-500'}
+                  href="/gallery"
+                >
+                  Gallery
+                </a>
+                <a
+                  className={route === '/testimonials' && 'text-emerald-500'}
+                  href="/testimonials"
+                >
+                  Testimonials
+                </a>
+                <a
+                  className={route === '/contact' && 'text-emerald-500'}
+                  href="/contact"
+                >
+                  Contact
+                </a>
                 <button className="bg-emerald-500 text-white font-thin rounded-full py-2 px-6 text-[15px] tracking-wide">
                   Free Quote
                 </button>
