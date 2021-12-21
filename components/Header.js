@@ -8,7 +8,6 @@ import {
 import { FaFacebook } from 'react-icons/fa'
 import Image from 'next/image'
 import Sidebar from './Sidebar'
-import { scrollTo } from '../utils/scrollTo'
 
 function Header() {
   const { route } = useRouter()
@@ -54,12 +53,6 @@ function Header() {
               </div>
             </div>
             <nav className="flex items-center relative text-gray-800 text-lg pt-6">
-              {/* <div className="flex w-80">
-          <a href="/" className="text-xl text-emerald-500">
-            Taylor Lawn & Landscaping
-          </a>
-        </div> */}
-
               <ul className="hidden lg:flex gap-8 items-center flex-1 justify-between">
                 <a href="/" className={route === '/' && 'text-emerald-500'}>
                   Home
@@ -72,7 +65,7 @@ function Header() {
                 </a>
                 <a
                   className={route === '/services' && 'text-emerald-500'}
-                  href="/"
+                  href="/services"
                 >
                   Services
                 </a>

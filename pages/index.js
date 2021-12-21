@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery'
 import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
+import Services from '../components/Services'
 
 export default function Home({ content, testimonials }) {
   const banner = content.find((item) => item._type === 'banner')
@@ -16,6 +17,7 @@ export default function Home({ content, testimonials }) {
       <Jumbotron banner={banner} />
       {/* CTA Section */}
       <About about={about} />
+      <Services />
       {/* Services */}
       <Gallery gallery={gallery} />
       <Testimonials limit={3} testimonials={testimonials} />
