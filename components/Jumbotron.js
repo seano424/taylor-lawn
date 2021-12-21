@@ -62,7 +62,12 @@ function Jumbotron({ banner }) {
 
   return (
     <div name="home" className="relative h-screen">
-      <Image className="object-cover" src={urlFor(image).url()} layout="fill" />
+      <Image
+        priority={true}
+        className="object-cover"
+        src={urlFor(image).url()}
+        layout="fill"
+      />
       <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
         <div className="max-w-7xl inline-flex flex-col gap-7 md:mt-20 lg:mt-64">
           <motion.div

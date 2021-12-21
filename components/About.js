@@ -29,6 +29,7 @@ function About({ about }) {
             className="object-cover rounded-lg "
             src={imageBuilder(image).url()}
             layout="fill"
+            priority={true}
           />
         </div>
       </div>
