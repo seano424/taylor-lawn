@@ -48,7 +48,6 @@ function Contact() {
           subject: Yup.string()
             .max(15, 'Must be 15 characters or less')
             .required('Required'),
-          message: Yup.string().required('Required'),
           email: Yup.string()
             .email('Invalid email address')
             .required('Required'),
@@ -112,6 +111,7 @@ function Contact() {
             id="message"
             cols="30"
             rows="6"
+            required
           ></textarea>
 
           <button

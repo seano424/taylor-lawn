@@ -54,35 +54,37 @@ function Header() {
             </div>
             <nav className="flex items-center relative text-gray-800 text-lg pt-6">
               <ul className="hidden lg:flex gap-8 items-center flex-1 justify-between">
-                <a href="/" className={route === '/' && 'text-emerald-500'}>
+                <a href="/" className={route === '/' ? 'text-emerald-500' : ''}>
                   Home
                 </a>
                 <a
-                  className={route === '/about' && 'text-emerald-500'}
+                  className={route === '/about' ? 'text-emerald-500' : ''}
                   href="/about"
                 >
                   About
                 </a>
                 <a
-                  className={route === '/services' && 'text-emerald-500'}
+                  className={route === '/services' ? 'text-emerald-500' : ''}
                   href="/services"
                 >
                   Services
                 </a>
                 <a
-                  className={route === '/gallery' && 'text-emerald-500'}
+                  className={route === '/gallery' ? 'text-emerald-500' : ''}
                   href="/gallery"
                 >
                   Gallery
                 </a>
                 <a
-                  className={route === '/testimonials' && 'text-emerald-500'}
+                  className={
+                    route === '/testimonials' ? 'text-emerald-500' : ''
+                  }
                   href="/testimonials"
                 >
                   Testimonials
                 </a>
                 <a
-                  className={route === '/contact' && 'text-emerald-500'}
+                  className={route === '/contact' ? 'text-emerald-500' : ''}
                   href="/contact"
                 >
                   Contact
