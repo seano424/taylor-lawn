@@ -4,8 +4,8 @@ const scroller = Scroll.scroller
 
 export const scrollTo = (element) => {
   scroller.scrollTo(element, {
-    duration: 700,
-    delay: 50,
+    duration: 1700,
+    delay: 150,
     smooth: true,
     offset: 0,
   })

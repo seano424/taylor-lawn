@@ -26,7 +26,7 @@ function Gallery({ gallery }) {
   }
   return (
     <div name="gallery" className="relative">
-      <div className="px-10 bg-[#FBF9F5] py-16">
+      <div className="px-10 bg-slate-100 pt-10 pb-20 mb-20">
         <h2 className="text-5xl text-emerald-500 font-sans font-black tracking-tight text-center ">
           Latest Projects
         </h2>

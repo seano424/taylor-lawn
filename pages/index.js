@@ -5,6 +5,7 @@ import About from '../components/About'
 import Gallery from '../components/Gallery'
 import Testimonials from '../components/Testimonials'
 import Footer from '../components/Footer'
+import Contact from '../components/Contact'
 
 export default function Home({ content, testimonials }) {
   const banner = content.find((item) => item._type === 'banner')
@@ -16,11 +17,9 @@ export default function Home({ content, testimonials }) {
       {/* CTA Section */}
       <About about={about} />
       {/* Services */}
-      {/* Gallery */}
       <Gallery gallery={gallery} />
-      {/* Testimonials */}
-      <Testimonials testimonials={testimonials} />
-      {/* Footer */}
+      <Testimonials limit={3} testimonials={testimonials} />
+      <Contact />
       <Footer />
     </Layout>
   )

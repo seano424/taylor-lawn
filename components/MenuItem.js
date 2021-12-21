@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { scrollTo } from '../utils/scrollTo'
+import { useRouter } from 'next/router'
 
 const variants = {
   open: {
@@ -33,9 +34,12 @@ const MenuItem = ({ i, text, toggle }) => {
     color: `${colors[i]}`,
     '&:hover': { background: colors[i] },
   }
+  const router = useRouter()
   const handleClick = (text) => {
-    scrollTo(text)
     toggle()
+    setTimeout(() => {
+      router.push(`/${text}`)
+    }, 800)
   }
   return (
     <motion.li
