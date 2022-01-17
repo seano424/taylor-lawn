@@ -8,15 +8,16 @@ import {
 import { FaFacebook } from 'react-icons/fa'
 import Image from 'next/image'
 import Sidebar from './Sidebar'
+import Headroom from 'react-headroom'
 
 function Header() {
-  const { route } = useRouter()
+  const { route, push } = useRouter()
   return (
-    <>
-      <div className="z-50 absolute  lg:hidden">
+    <nav>
+      <div className="z-50 absolute lg:hidden">
         <Sidebar />
       </div>
-      <div className="hidden lg:inline-flex absolute z-10 w-full bg-white px-8 xl:px-20 py-3">
+      <div className="hidden lg:block top-0 fixed z-50 w-full bg-white px-8 xl:px-20 py-3">
         <div className="flex items-center">
           {/* Image Section Left*/}
           <section className="hidden lg:inline-flex">
@@ -89,7 +90,10 @@ function Header() {
                 >
                   Contact
                 </a>
-                <button className="bg-emerald-500 text-white font-thin rounded-full py-2 px-6 text-[15px] tracking-wide">
+                <button
+                  onClick={() => push('/contact')}
+                  className="bg-emerald-500 text-white font-thin rounded-full py-2 px-6 text-[15px] tracking-wide"
+                >
                   Free Quote
                 </button>
               </ul>
@@ -97,7 +101,7 @@ function Header() {
           </section>
         </div>
       </div>
-    </>
+    </nav>
   )
 }
 

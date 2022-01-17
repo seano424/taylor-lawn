@@ -1,9 +1,18 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 
+const iconItems = [
+  {heading: 'Landscape Designing', icon: 'pruning'}, 
+  {heading: 'Plant & Tree Solutions', icon: 'plant'}, 
+  {heading: 'Irrigation System Service and Installation', icon: 'sprinkler'}, 
+  {heading: 'Custom Mowing Design', icon: 'lawn-mower'}, 
+]
+
 function Services() {
+  const { push } = useRouter()
   return (
-    <section className="grid grid-cols-2 py-20 px-32">
-      <article className="flex flex-col justify-between gap-4 ">
+    <section className="grid lg:grid-cols-2 p-20">
+      <div className="flex flex-col justify-between gap-4 ">
         <h2 className="text-5xl text-emerald-500 font-black">
           We offer Hard & Soft Landscape Solutions
         </h2>
@@ -14,52 +23,27 @@ function Services() {
           Renovation Irrigation System Service and Installation, and Snow
           Removal and Ice Management.
         </p>
-        <button className="bg-emerald-500 text-white w-40 rounded-md py-2 text-xl">
+        <button
+          onClick={() => push('/contact')}
+          className="bg-emerald-500 text-white w-40 rounded-md py-2 text-xl"
+        >
           Contact Us
         </button>
-      </article>
-      <article className="grid grid-cols-2 gap-8 mx-auto">
-        <div className="flex flex-col items-center justify-center shadow p-5 max-w-max">
-          <img
-            className="h-20"
-            src="/images/pruning.png"
-            alt="Icon for Landscape Design"
-          />
-          <h4 className=" w-48 text-center pt-4 text-xl">
-            Landscape Designing
-          </h4>
-        </div>
-        <div className="flex flex-col items-center justify-center shadow p-5 max-w-max">
-          <img
-            className="h-20 "
-            src="/images/plant.png"
-            alt="Icon for Landscape Design"
-          />
-          <h4 className=" w-48 text-center pt-4 text-xl">
-            Plant & Tree Solutions
-          </h4>
-        </div>
-        <div className="flex flex-col items-center justify-center shadow p-5 max-w-max">
-          <img
-            className="h-20"
-            src="/images/sprinkler.png"
-            alt="Icon for Landscape Design"
-          />
-          <h4 className=" w-48 text-center pt-4 text-xl">
-            Irrigation System Service and Installation
-          </h4>
-        </div>
-        <div className="flex flex-col items-center justify-center shadow p-5 max-w-max">
-          <img
-            className="h-20"
-            src="/images/lawn-mower.png"
-            alt="Icon for Landscape Design"
-          />
-          <h4 className=" w-48 text-center pt-4 text-xl">
-            Custom Mowing Design
-          </h4>
-        </div>
-      </article>
+      </div>
+      <div className="hidden lg:grid grid-cols-2 gap-10">
+        {iconItems.map(item => (
+          <div key={item.icon} className="flex flex-col items-center justify-center shadow p-5">
+            <img
+              className="h-20"
+              src={`/images/${ item.icon }.png`}
+              alt="Icon for Landscape Design"
+            />
+            <h4 className=" w-48 text-center pt-4 text-xl">
+              { item.heading }
+            </h4>
+          </div>
+        ))}
+      </div>
     </section>
   )
 }

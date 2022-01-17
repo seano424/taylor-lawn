@@ -25,9 +25,15 @@ function Footer() {
       </article>
       <article className="flex flex-col mb-6 w-1/2 lg:w-64 p-5">
         <h2 className="text-2xl mb-6 font-black">About Us</h2>
-        <p className="text-gray-700 mb-4 border-b">Home</p>
-        <p className="text-gray-700 mb-4 border-b">About</p>
-        <p className="text-gray-700 mb-4 border-b">Contact</p>
+        <a href="/" className="text-gray-700 mb-4 border-b">
+          Home
+        </a>
+        <a href="/about" className="text-gray-700 mb-4 border-b">
+          About
+        </a>
+        <a href="/contact" className="text-gray-700 mb-4 border-b">
+          Contact
+        </a>
       </article>
       <article className="flex flex-col mb-6 w-1/2 lg:w-64 p-5">
         <h2 className="text-2xl mb-6 font-black">Popular Services</h2>

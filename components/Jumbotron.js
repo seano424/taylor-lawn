@@ -63,7 +63,7 @@ function Jumbotron({ banner }) {
   }
 
   return (
-    <div name="home" className="relative h-screen">
+    <div name="top" className="relative h-screen">
       <Image
         priority={true}
         className="object-cover"
