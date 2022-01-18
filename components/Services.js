@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
+import Image from 'next/image'
 
 const iconItems = [
   {heading: 'Landscape Designing', icon: 'pruning'}, 
@@ -33,10 +34,11 @@ function Services() {
       <div className="hidden lg:grid grid-cols-2 gap-10">
         {iconItems.map(item => (
           <div key={item.icon} className="flex flex-col items-center justify-center shadow p-5">
-            <img
-              className="h-20"
+            <Image
               src={`/images/${ item.icon }.png`}
               alt="Icon for Landscape Design"
+              height={100}
+              width={100}
             />
             <h4 className=" w-48 text-center pt-4 text-xl">
               { item.heading }

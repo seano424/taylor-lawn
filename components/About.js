@@ -26,6 +26,7 @@ function About({ about }) {
         </div>
         <div className="relative h-44 md:h-full w-full shadow-xl">
           <Image
+            alt="About Page Image"
             className="object-cover rounded-lg "
             src={imageBuilder(image).url()}
             layout="fill"

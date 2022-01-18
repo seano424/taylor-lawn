@@ -40,8 +40,8 @@ function Card({ i, idx, variants }) {
         <Image
           className="rounded object-cover group-hover:scale-105 transition duration-200 ease-linear"
           src={urlFor(i.image).url()}
+          alt="Landscaping image"
           layout="fill"
-          priority={true}
         />
         <div className="absolute h-full w-full group-hover:shadow-xl group-hover:bg-gray-100 group-hover:bg-opacity-5 transition duration-200 ease-linear" />
       </motion.div>

@@ -83,9 +83,9 @@ function Jumbotron({ banner }) {
             <motion.h1 variants={header2}>Landscaping</motion.h1>
           </motion.div>
 
-          <h4 className="text-3xl lg:text-5xl font-bold text-gray-100 ">
+          <p className="text-3xl font-serif lg:text-5xl font-bold text-gray-100 ">
             {subtitle}
-          </h4>
+          </p>
           <div className="flex flex-col md:flex-row gap-3 justify-center">
             <motion.button
               onClick={() => push('/contact')}
