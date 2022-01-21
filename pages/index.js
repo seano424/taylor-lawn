@@ -42,13 +42,13 @@ export default function Home({ content, testimonials }) {
 
   return (
     <Layout>
-      {showScroll && (
+      {/* {showScroll && (
         <div aria-label='scroll to the top' onClick={() => scrollTo('top')} className='fixed right-10 bottom-10 bg-white cursor-pointer z-50 border-8 rounded-full'>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
           </svg>
         </div>
-      )}
+      )} */}
       <Jumbotron banner={banner} />
       {/* CTA Section */}
       <About about={about} />

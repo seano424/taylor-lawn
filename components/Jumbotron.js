@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { urlFor } from '../lib/client'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 
 function Jumbotron({ banner }) {
@@ -44,19 +44,31 @@ function Jumbotron({ banner }) {
     },
   }
 
+  const buttonContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5
+      }
+    }
+  }
+
   const button1 = {
-    hidden: { y: 400 },
+    hidden: { y: 300, opacity: 0 },
     show: {
       y: 0,
-      transition: { duration: 1.2, ease: 'backInOut' },
+      opacity: 1,
+      transition: { duration: .6, ease: 'backInOut' },
     },
   }
   const button2 = {
-    hidden: { y: 400 },
+    hidden: { y: 300, opacity: 0 },
     show: {
       y: 0,
+      opacity: 1,
       transition: {
-        duration: 1.4,
+        duration: .8,
         ease: 'backInOut',
       },
     },
@@ -70,44 +82,52 @@ function Jumbotron({ banner }) {
         src={urlFor(image).url()}
         layout="fill"
       />
-      <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
-        <div className="max-w-7xl inline-flex flex-col gap-7 md:mt-20 lg:mt-64">
-          <motion.div
-            initial="hidden"
-            animate="show"
-            variants={container}
-            className="flex flex-col md:flex-row gap-2 items-center justify-center text-gray-100 text-[2.5rem] lg:text-7xl font-black"
-          >
-            <motion.h1 variants={header1}>Taylor Lawn</motion.h1>
-            <motion.h1 variants={span}>&</motion.h1>
-            <motion.h1 variants={header2}>Landscaping</motion.h1>
-          </motion.div>
+      <AnimatePresence>
 
-          <p className="text-3xl font-serif lg:text-5xl font-bold text-gray-100 ">
-            {subtitle}
-          </p>
-          <div className="flex flex-col md:flex-row gap-3 justify-center">
-            <motion.button
-              onClick={() => push('/contact')}
+        <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
+          <motion.div className="max-w-7xl inline-flex flex-col gap-7 md:mt-20 lg:mt-64">
+            <motion.div
               initial="hidden"
               animate="show"
-              variants={button1}
-              className="rounded-full text-lg px-8 py-3 text-white border-white hover:bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
+              variants={container}
+              className="flex flex-col md:flex-row gap-2 items-center justify-center text-gray-100 text-[2.5rem] lg:text-7xl font-black"
             >
-              Contact us
-            </motion.button>
-            <motion.button
-              onClick={() => push('/contact')}
+              <motion.h1 variants={header1}>Taylor Lawn</motion.h1>
+              <motion.h1 variants={span}>&</motion.h1>
+              <motion.h1 variants={header2}>Landscaping</motion.h1>
+            </motion.div>
+
+            <p className="text-3xl font-serif lg:text-5xl font-bold text-gray-100 ">
+              {subtitle}
+            </p>
+            <motion.div 
               initial="hidden"
               animate="show"
-              variants={button2}
-              className="text-emerald-500 text-lg bg-white rounded-full px-8 py-3 hover:bg-emerald-500 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300 font-bold"
-            >
-              Request an Estimate
-            </motion.button>
-          </div>
+              variants={buttonContainer}
+              className="flex flex-col md:flex-row gap-3 justify-center"
+              >
+              <motion.button
+                onClick={() => push('/contact')}
+                initial="hidden"
+                animate="show"
+                variants={button1}
+                className="rounded-full text-lg px-8 py-3 text-white border-white hover:bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
+              >
+                Contact us
+              </motion.button>
+              <motion.button
+                onClick={() => push('/contact')}
+                initial="hidden"
+                animate="show"
+                variants={button2}
+                className="text-emerald-500 text-lg bg-white rounded-full px-8 py-3 hover:bg-emerald-500 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300 font-bold"
+              >
+                Request an Estimate
+              </motion.button>
+            </motion.div>
+          </motion.div>
         </div>
-      </div>
+      </AnimatePresence>
     </div>
   )
 }
