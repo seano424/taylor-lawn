@@ -29,7 +29,7 @@ function Header() {
               <div className="flex items-center space-x-12">
                 <div className="flex items-center gap-2">
                   <PhoneIcon className="h-6" />
-                  <a className='font-black text-xl text text-[#E31837]' href="tel:+1-913-206-7214">(913) 206 7214</a>
+                  <a className='font-black' href="tel:+1-913-206-7214">(913) 206 7214</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <ClockIcon className="h-6" />
@@ -41,7 +41,7 @@ function Header() {
                 </div>
                 <div className="flex items-center gap-2">
                   <LocationMarkerIcon className="h-6" />
-                  <span className='text-xl text-[#E31837] font-black'>Kansas City Metro Area</span>
+                  <span className='font-black'>Kansas City Metro Area</span>
                 </div>
               </div>
               <div className="flex items-center gap-2">
