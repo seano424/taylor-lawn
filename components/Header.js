@@ -25,11 +25,11 @@ function Header() {
           </section>
           {/* Navbar Section Right */}
           <section className="w-full ml-10">
-            <div className="hidden lg:flex justify-between w-full gap-8 border-b border-opacity-40  py-4 text-emerald-500 font-thin">
+            <div className="hidden lg:flex justify-between w-full gap-8 border-b border-opacity-40 py-4 text-emerald-500 font-thin">
               <div className="flex items-center space-x-12">
                 <div className="flex items-center gap-2">
                   <PhoneIcon className="h-6" />
-                  <span>(913) 206 7214</span>
+                  <a className='font-black text-xl text text-[#E31837]' href="tel:+1-913-206-7214">(913) 206 7214</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <ClockIcon className="h-6" />
@@ -41,11 +41,12 @@ function Header() {
                 </div>
                 <div className="flex items-center gap-2">
                   <LocationMarkerIcon className="h-6" />
-                  <span>Kansas City Metro Area</span>
+                  <span className='text-xl text-[#E31837] font-black'>Kansas City Metro Area</span>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <a
+                  className='flex gap-2'
                   target="_blank"
                   href="https://www.facebook.com/TaylorLawnandLandscaping"
                 >

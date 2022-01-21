@@ -1,14 +1,11 @@
-import Head from 'next/head'
+
 import Header from './Header'
+import Meta from './Meta'
 
 function Layout({ children }) {
   return (
     <div>
-      <Head>
-        <title>Taylor Lawn & Landscaping</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <Meta/>
       <Header />
       <main className="relative">{children}</main>
     </div>

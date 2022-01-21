@@ -24,8 +24,6 @@ function Testimonials({ testimonials }) {
         spaceBetween={50}
         navigation
         pagination={{ clickable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
         className="mt-10"
       >
         {testimonials.map((testimonial) => (
