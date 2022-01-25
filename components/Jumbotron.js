@@ -49,9 +49,9 @@ function Jumbotron({ banner }) {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5
-      }
-    }
+        staggerChildren: 0.5,
+      },
+    },
   }
 
   const button1 = {
@@ -59,7 +59,7 @@ function Jumbotron({ banner }) {
     show: {
       y: 0,
       opacity: 1,
-      transition: { duration: .6, ease: 'backInOut' },
+      transition: { duration: 0.6, ease: 'backInOut' },
     },
   }
   const button2 = {
@@ -68,7 +68,7 @@ function Jumbotron({ banner }) {
       y: 0,
       opacity: 1,
       transition: {
-        duration: .8,
+        duration: 0.8,
         ease: 'backInOut',
       },
     },
@@ -83,7 +83,6 @@ function Jumbotron({ banner }) {
         layout="fill"
       />
       <AnimatePresence>
-
         <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
           <motion.div className="max-w-7xl inline-flex flex-col gap-7 md:mt-20 lg:mt-64">
             <motion.div
@@ -100,18 +99,18 @@ function Jumbotron({ banner }) {
             <p className="text-3xl font-serif lg:text-5xl font-bold text-gray-100 ">
               {subtitle}
             </p>
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate="show"
               variants={buttonContainer}
               className="flex flex-col md:flex-row gap-3 justify-center"
-              >
+            >
               <motion.button
                 onClick={() => push('/contact')}
                 initial="hidden"
                 animate="show"
                 variants={button1}
-                className="rounded-full text-lg px-8 py-3 text-white border-white hover:bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
+                className="rounded-full text-lg px-8 py-3 text-white border-emerald-500 bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
               >
                 Contact us
               </motion.button>

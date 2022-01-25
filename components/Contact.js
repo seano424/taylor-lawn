@@ -17,31 +17,41 @@ function Contact() {
     <>
       <Modal open={open} setOpen={setOpen} />
       <section className="grid lg:grid-cols-2 gap-10 xl:px-36 py-20 bg-gray-50">
-        <article className="items-center text-emerald-500 flex flex-col gap-4">
-          <h2 className="text-5xl font-black">Contact details</h2>
-          <p className="text-gray-600">TXT or CALL for a free estimate today</p>
-          <h2 className="text-5xl font-black">913-206-7214</h2>
-          <div className="contact-icons flex items-center justify-center flex-wrap gap-10 py-8">
-            <div className="w-56 sm:w-64 lg:w-56  flex flex-col items-center">
+        <article className="text-emerald-500">
+          <div className="flex flex-col gap-4 items-center text-5xl font-black">
+            <h2>Contact details</h2>
+            <p className="text-gray-600 font-normal text-base">
+              TXT or CALL for a free estimate today
+            </p>
+            <a className="font-serif" href="tel:+1-913-206-7214">
+              (913) 206 7214
+            </a>
+          </div>
+          <div className="contact-icons flex items-center justify-center flex-wrap gap-10 py-16">
+            <div className="w-40 sm:w-64 lg:w-56  flex flex-col items-center">
               <LocationMarkerIcon className="w-12" />
               <h4>Location</h4>
               <p className="text-gray-600">Merriam, Kansas</p>
             </div>
-            <div className="w-56 sm:w-64 lg:w-56  flex flex-col items-center">
+            <div className="w-40 sm:w-64 lg:w-56  flex flex-col items-center">
               <PhoneIcon className="w-12" />
               <h4>Call Us</h4>
-              <p className="text-gray-600">913-206-7214</p>
+              <a className="text-gray-600" href="tel:+1-913-206-7214">
+                (913) 206 7214
+              </a>
             </div>
-            <div className="w-56 sm:w-64 lg:w-56  flex flex-col items-center">
+            <div className="w-40 sm:w-64 lg:w-56  flex flex-col items-center">
               <MailIcon className="w-12" />
               <h4>Write to Us</h4>
               <p className="text-gray-600">taylorlawn@hotmail.com</p>
             </div>
-            <div className="w-56 sm:w-64 lg:w-56  flex flex-col items-center">
+            <div className="w-40 sm:w-64 lg:w-56 flex flex-col items-center">
               <ClockIcon className="w-12" />
               <h4>Working Hours</h4>
-              <p className="text-gray-600">Monday - Friday: 8:00-5:00</p>
-              <p className="text-gray-600">Saturday: 10:30-2:00</p>
+              <p className="text-gray-600">Monday - Friday:</p>
+              <span>8:00-5:00</span>
+              <p className="text-gray-600">Saturday:</p>
+              <span>10:30-2:00</span>
             </div>
           </div>
         </article>
@@ -78,7 +88,7 @@ function Contact() {
             setValue('')
           }}
         >
-          <Form className="flex flex-col gap-2 mx-10 lg:mx-0">
+          <Form className="flex flex-col gap-4 mx-10 lg:mx-0">
             <h2 className="text-5xl mb-4 text-emerald-500 font-black">
               Have a question?
             </h2>
@@ -124,10 +134,7 @@ function Contact() {
               onChange={(e) => setValue(e.target.value)}
             ></textarea>
 
-            <button
-              className="bg-emerald-500 text-white w-40 rounded-md py-2 text-lg"
-              type="submit"
-            >
+            <button className="button text-lg" type="submit">
               Send
             </button>
           </Form>

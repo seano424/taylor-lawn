@@ -9,6 +9,13 @@ module.exports = {
       sans: ['Montserrat', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
+    debugScreens: {
+      position: ['bottom', 'right'],
+    },
   },
-  plugins: [require('tailwind-scrollbar-hide'), require('@tailwindcss/forms')],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/forms'),
+    require('tailwindcss-debug-screens'),
+  ],
 }

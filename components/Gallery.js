@@ -27,9 +27,12 @@ function Gallery({ gallery }) {
   return (
     <div name="gallery" className="relative">
       <div className="px-10 bg-slate-100 pt-10 pb-20 mb-20">
-        <h2 className="text-5xl text-emerald-500 font-sans font-black tracking-tight text-center ">
-          Latest Projects
-        </h2>
+        <div className="relative mx-4 md:mx-28 lg:w-max lg:mx-auto">
+          <h2 className="text-5xl z-10 mb-2 font-black text-black font-sans text-center relative">
+            Latest Projects
+          </h2>
+          <div className="border-b-[16px] border-emerald-300 border-opacity-90 absolute w-full bottom-2" />
+        </div>
         <ul className="flex justify-center gap-10 text-xl py-8 font-semibold">
           <li
             onClick={() => setImages(gallery.images)}

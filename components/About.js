@@ -15,7 +15,7 @@ function About({ about }) {
           "The True Green Thumb!"
         </h2>
       </div>
-      <div className="flex flex-col-reverse md:grid grid-cols-2 gap-10">
+      <div className="flex flex-col-reverse lg:grid grid-cols-2 gap-10">
         <div className="flex flex-col gap-4">
           <h4 className="text-xl font-bold">About our company</h4>
           <SanityBlockContent blocks={bio1} />
@@ -24,10 +24,10 @@ function About({ about }) {
           <p>Monday - Friday 8:00 am to 5:00pm</p>
           <p>Saturday - 10:30 am to 2:00 pm</p>
         </div>
-        <div className="relative h-44 md:h-full w-full shadow-xl">
+        <div className="relative h-64 lg:h-full w-full shadow-xl">
           <Image
             alt="About Page Image"
-            className="object-cover rounded-lg "
+            className="object-cover object-bottom rounded-lg "
             src={imageBuilder(image).url()}
             layout="fill"
             priority={true}
