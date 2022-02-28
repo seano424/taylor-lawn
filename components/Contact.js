@@ -18,7 +18,7 @@ function Contact() {
       <Modal open={open} setOpen={setOpen} />
       <section className="grid lg:grid-cols-2 gap-10 xl:px-36 py-20 bg-gray-50">
         <article className="text-emerald-500">
-          <div className="flex flex-col gap-4 items-center text-5xl font-black">
+          <div className="flex flex-col gap-4 items-center text-3xl xl:text-5xl font-black">
             <h2>Contact details</h2>
             <p className="text-gray-600 font-normal text-base">
               TXT or CALL for a free estimate today
@@ -27,25 +27,30 @@ function Contact() {
               (913) 206 7214
             </a>
           </div>
-          <div className="contact-icons flex items-center justify-center flex-wrap gap-10 py-16">
-            <div className="w-40 sm:w-64 lg:w-56  flex flex-col items-center">
+          <div className="contact-icons text-sm sm:text-lg grid grid-cols-2 gap-4 lg:gap-10 my-10 mx-6 lg:m-12 items-center text-center lg:text-left">
+            <div className="flex flex-col items-center">
               <LocationMarkerIcon className="w-12" />
               <h4>Location</h4>
               <p className="text-gray-600">Merriam, Kansas</p>
             </div>
-            <div className="w-40 sm:w-64 lg:w-56  flex flex-col items-center">
+            <div className=" flex flex-col items-center">
               <PhoneIcon className="w-12" />
               <h4>Call Us</h4>
               <a className="text-gray-600" href="tel:+1-913-206-7214">
                 (913) 206 7214
               </a>
             </div>
-            <div className="w-40 sm:w-64 lg:w-56  flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <MailIcon className="w-12" />
               <h4>Write to Us</h4>
-              <p className="text-gray-600">taylorlawn@hotmail.com</p>
+              <a
+                className="text-gray-600 text-xs sm:text-base"
+                href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!"
+              >
+                taylorlawn@hotmail.com
+              </a>
             </div>
-            <div className="w-40 sm:w-64 lg:w-56 flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <ClockIcon className="w-12" />
               <h4>Working Hours</h4>
               <p className="text-gray-600">Monday - Friday:</p>

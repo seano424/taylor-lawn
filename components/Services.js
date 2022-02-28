@@ -12,19 +12,22 @@ const iconItems = [
 function Services() {
   const { push } = useRouter()
   return (
-    <section className="grid lg:grid-cols-2 p-20 mt-10 lg:mt-0">
+    <section className="grid lg:grid-cols-2 p-4 xl:p-20 my-10 lg:mt-0">
       <div className="flex flex-col gap-8 justify-between">
-        <h2 className="text-5xl text-emerald-500 font-black">
+        <h2 className="text-3xl lg:text-5xl text-emerald-500 font-black">
           We offer Hard & Soft Landscape Solutions
         </h2>
-        <p className="text-gray-700 text-xl tracking-wide leading-relaxed max-w-xl">
+        <p className="text-gray-700 lg:text-xl tracking-wide leading-relaxed max-w-xl">
           Whether you're looking for hard or soft landscape solutions, we've got
           you covered. Our services include 3D Image Design and Build, Landscape
           Maintenance Retaining Walls, French Drains, Custom Mowing Design,
           Renovation Irrigation System Service and Installation, and Snow
           Removal and Ice Management.
         </p>
-        <button onClick={() => push('/contact')} className="button text-3xl">
+        <button
+          onClick={() => push('/contact')}
+          className="button mx-auto lg:text-3xl"
+        >
           Contact Us
         </button>
       </div>

@@ -84,16 +84,16 @@ function Jumbotron({ banner }) {
       />
       <AnimatePresence>
         <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
-          <motion.div className="max-w-7xl inline-flex flex-col gap-7 md:mt-20 lg:mt-64">
+          <motion.div className="max-w-7xl inline-flex flex-col gap-7 mt-10 md:mt-20 lg:mt-64">
             <motion.div
               initial="hidden"
               animate="show"
               variants={container}
-              className="flex flex-col md:flex-row gap-2 items-center justify-center text-gray-100 text-[2.5rem] lg:text-7xl font-black"
+              className="flex flex-col md:flex-row gap-2 items-center justify-center text-gray-100 text-4xl sm:text-5xl lg:text-7xl font-black"
             >
               <motion.h1 variants={header1}>Taylor Lawn</motion.h1>
               <motion.h1 variants={span}>&</motion.h1>
-              <motion.h1 variants={header2}>Landscaping</motion.h1>
+              <motion.h1 variants={header2}>Landscaping L.L.C.</motion.h1>
             </motion.div>
 
             <p className="text-3xl font-serif lg:text-5xl font-bold text-gray-100 ">
@@ -103,14 +103,14 @@ function Jumbotron({ banner }) {
               initial="hidden"
               animate="show"
               variants={buttonContainer}
-              className="flex flex-col md:flex-row gap-3 justify-center"
+              className="flex flex-col md:flex-row mx-10 gap-3 justify-center"
             >
               <motion.button
                 onClick={() => push('/contact')}
                 initial="hidden"
                 animate="show"
                 variants={button1}
-                className="rounded-full text-lg px-8 py-3 text-white border-emerald-500 bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
+                className="rounded-full lg:text-lg px-8 py-3 text-white border-emerald-500 bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
               >
                 Contact us
               </motion.button>
@@ -119,7 +119,7 @@ function Jumbotron({ banner }) {
                 initial="hidden"
                 animate="show"
                 variants={button2}
-                className="text-emerald-500 text-lg bg-white rounded-full px-8 py-3 hover:bg-emerald-500 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300 font-bold"
+                className="text-emerald-500 lg:text-lg bg-white rounded-full px-8 py-3 hover:bg-emerald-500 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300 font-bold"
               >
                 Request an Estimate
               </motion.button>

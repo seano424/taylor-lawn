@@ -33,7 +33,7 @@ function Gallery({ gallery }) {
           </h2>
           <div className="border-b-[16px] border-emerald-300 border-opacity-90 absolute w-full bottom-2" />
         </div>
-        <ul className="flex justify-center gap-10 text-xl py-8 font-semibold">
+        <ul className="flex justify-center gap-3 lg:gap-10 text-xl py-8 font-semibold">
           <li
             onClick={() => setImages(gallery.images)}
             className={`hover:text-emerald-500 tracking-tight cursor-pointer`}

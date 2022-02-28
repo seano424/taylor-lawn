@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className="flex flex-col md:flex-row gap-8 flex-wrap justify-between py-10 px-10 xl:px-20">
       {/* Contact Us */}
-      <article className="flex flex-col items-center md:items-start mb-6 md:w-80 lg:w-max xl:w-64">
+      <article className="flex flex-col mb-6 md:w-80 lg:w-max xl:w-64">
         <h2 className="text-2xl mb-6 font-black">Contact Us</h2>
         <div className="flex items-center gap-2 mb-4">
           <PhoneIcon className="h-6 w-6 text-emerald-500" />
@@ -36,7 +36,7 @@ function Footer() {
       </article>
 
       {/* About Us */}
-      <article className="flex flex-col items-center md:items-start mb-6  md:w-80 lg:w-max xl:w-64">
+      <article className="hidden sm:flex flex-col mb-6  md:w-80 lg:w-max xl:w-64">
         <h2 className="text-2xl mb-6 font-black">About Us</h2>
         <a
           href="/"
@@ -59,7 +59,7 @@ function Footer() {
       </article>
 
       {/* Popular Services */}
-      <article className="flex flex-col items-center md:items-start mb-6 md:w-80 lg:w-max xl:w-64">
+      <article className="flex flex-col mb-6 md:w-80 lg:w-max xl:w-64">
         <h2 className="text-2xl mb-6 font-black">Popular Services</h2>
         <p className="text-gray-700 mb-4 border-b">Lawn Mowing</p>
         <p className="text-gray-700 mb-4 border-b">Hedge Cutting</p>
@@ -68,7 +68,7 @@ function Footer() {
       </article>
 
       {/* Emergency Service */}
-      <article className="flex flex-col items-center md:items-start mb-6 md:w-80 lg:w-max xl:w-64">
+      <article className="flex flex-col mb-6 md:w-80 lg:w-max xl:w-64">
         <h2 className="text-2xl mb-6 font-black">Emergency Service</h2>
         <div className="flex items-center gap-2 mb-4">
           <PhoneIcon className="h-6 w-6 text-emerald-500" />
