@@ -76,47 +76,36 @@ function Jumbotron({ banner }) {
 
   return (
     <div name="top" className="relative h-screen">
-      <Image
-        priority={true}
-        className="object-cover"
-        src={urlFor(image).url()}
-        layout="fill"
+      <img
+        // priority={true}
+        className="object-cover absolute h-full w-full"
+        // src={urlFor(image).url()}
+        // layout="fill"
+        src="/images/soil.jpg"
       />
       <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
         <div className="max-w-7xl inline-flex flex-col gap-7 mt-10 md:mt-20 lg:mt-64">
-          <div
-            // initial="hidden"
-            // animate="show"
-            // variants={container}
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={container}
             className="flex flex-col md:flex-row gap-2 items-center justify-center text-gray-100 text-4xl sm:text-5xl lg:text-7xl font-black"
           >
-            <h1
-            // variants={header1}
-            >
-              Taylor Lawn
-            </h1>
-            <h1
-            // variants={span}
-            >
-              &
-            </h1>
-            <h1
-            // variants={header2}
-            >
-              Landscaping L.L.C.
-            </h1>
-          </div>
+            <motion.h1 variants={header1}>Taylor Lawn</motion.h1>
+            <motion.h1 variants={span}>&</motion.h1>
+            <motion.h1 variants={header2}>Landscaping L.L.C.</motion.h1>
+          </motion.div>
 
           <p className="text-3xl font-serif lg:text-5xl font-bold text-gray-100 ">
             {subtitle}
           </p>
-          <div
+          <motion.div
             // initial="hidden"
             // animate="show"
             // variants={buttonContainer}
             className="flex flex-col md:flex-row mx-10 gap-3 justify-center"
           >
-            <button
+            <motion.button
               onClick={() => push('/contact')}
               // initial="hidden"
               // animate="show"
@@ -124,7 +113,7 @@ function Jumbotron({ banner }) {
               className="rounded-full lg:text-lg px-8 py-3 text-white border-emerald-500 bg-emerald-500 hover:text-slate-50 border hover:border-slate-50 hover:bg-opacity-50 transition duration-300 font-bold"
             >
               Contact us
-            </button>
+            </motion.button>
             <button
               onClick={() => push('/contact')}
               // initial="hidden"
@@ -134,7 +123,7 @@ function Jumbotron({ banner }) {
             >
               Request an Estimate
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
