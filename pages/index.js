@@ -9,12 +9,13 @@ import Contact from '../components/Contact'
 import Services from '../components/Services'
 
 export default function Home({ content, testimonials }) {
+  const banner = content.find((item) => item._type === 'banner')
   const about = content.find((item) => item._type === 'about')
   const gallery = content.find((item) => item._type === 'gallery')
 
   return (
     <Layout>
-      <Jumbotron />
+      <Jumbotron banner={banner} />
       <About about={about} />
       <Services />
       <Gallery gallery={gallery} />

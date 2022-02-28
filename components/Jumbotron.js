@@ -1,9 +1,12 @@
+import React from 'react'
+import Image from 'next/image'
+import { urlFor } from '../lib/client'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 
-function Jumbotron() {
+function Jumbotron({ banner }) {
   const { push } = useRouter()
+  const { image, subtitle } = banner
 
   const container = {
     hidden: { opacity: 0 },
@@ -74,13 +77,10 @@ function Jumbotron() {
   return (
     <div name="top" className="relative h-screen">
       <Image
-        // width={100}
-        // height={100}
         priority={true}
-        className="object-cover absolute h-full w-full"
-        // src={urlFor(image).url()}
+        className="object-cover"
+        src={urlFor(image).url()}
         layout="fill"
-        src="/images/soil.jpg"
       />
       <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
         <div className="max-w-7xl inline-flex flex-col gap-7 mt-10 md:mt-20 lg:mt-64">
@@ -96,7 +96,7 @@ function Jumbotron() {
           </motion.div>
 
           <p className="text-3xl font-serif lg:text-5xl font-bold text-gray-100 ">
-            The True Green Thumb
+            {subtitle}
           </p>
           <motion.div
             // initial="hidden"
