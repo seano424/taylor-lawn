@@ -5,7 +5,7 @@ export default function Meta() {
     <Head>
       <title>Taylor Lawn & Landscaping L.L.C</title>
       <link rel="icon" href="/favicon.ico" />
-      <meta charset="utf-8"></meta>
+      <meta charSet="utf-8"></meta>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="description"
