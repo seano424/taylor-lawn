@@ -7,7 +7,7 @@ export default function Home({ testimonials }) {
   return (
     <Layout>
       <div className="relative lg:top-40">
-        <Testimonials testimonials={testimonials} />
+        <Testimonials content={testimonials} />
         <Footer />
       </div>
     </Layout>
