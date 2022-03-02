@@ -1,4 +1,5 @@
 
+import Footer from './Footer'
 import Header from './Header'
 import Meta from './Meta'
 
@@ -7,7 +8,8 @@ function Layout({ children }) {
     <div>
       <Meta/>
       <Header />
-      <main className="relative">{children}</main>
+      <main>{children}</main>
+      <Footer />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Testimonial from './Testimonial'
+import Testimonial from '../Testimonial'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, A11y, Keyboard } from 'swiper'
 
@@ -9,7 +9,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import 'swiper/css/keyboard'
 
-function Testimonials({ testimonials }) {
+function Testimonials({ content }) {
   return (
     <section name="testimonials" className="flex flex-col gap-8 my-20">
       <div className="relative mx-4 md:mx-28 lg:w-max lg:mx-auto">
@@ -26,8 +26,8 @@ function Testimonials({ testimonials }) {
         pagination={{ clickable: true }}
         className="mt-10"
       >
-        {testimonials.map((testimonial) => (
-          <SwiperSlide key={testimonial._id}>
+        {content.map((testimonial, idx) => (
+          <SwiperSlide key={idx}>
             <Testimonial testimonial={testimonial} />
           </SwiperSlide>
         ))}
@@ -38,4 +38,3 @@ function Testimonials({ testimonials }) {
 
 export default Testimonials
 
-// flex-wrap overflow-scroll flex-col items-center scrollbar-hide

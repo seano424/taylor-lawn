@@ -1,12 +1,15 @@
-import '../styles/globals.css'
+import 'styles/globals.css'
 import 'react-multi-carousel/lib/styles.css'
-import { ModalProvider } from '../context/ModalContext'
-import "swiper/css/bundle";
+import { ModalProvider } from 'context/ModalContext'
+import 'swiper/css/bundle'
+import Layout from 'components/Layout'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ModalProvider>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ModalProvider>
   )
 }

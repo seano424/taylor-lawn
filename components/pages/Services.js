@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import React from 'react'
 import Image from 'next/image'
 
 const iconItems = [
@@ -12,12 +11,12 @@ const iconItems = [
 function Services() {
   const { push } = useRouter()
   return (
-    <section className="grid lg:grid-cols-2 p-4 xl:p-20 my-10 lg:mt-0">
-      <div className="flex flex-col gap-8 justify-between">
-        <h2 className="text-3xl lg:text-5xl text-emerald-500 font-black">
+    <section className="grid lg:grid-cols-2 p-4 xl:p-20 my-10 lg:mt-0 bg-white">
+      <div className="flex flex-col gap-8 justify-between items-center text-center">
+        <h2 className="text-3xl lg:text-5xl text-emerald-700 font-black">
           We offer Hard & Soft Landscape Solutions
         </h2>
-        <p className="text-gray-700 lg:text-xl tracking-wide leading-relaxed max-w-xl">
+        <p className="text-gray-900 lg:text-xl tracking-wide leading-relaxed max-w-xl">
           Whether you're looking for hard or soft landscape solutions, we've got
           you covered. Our services include 3D Image Design and Build, Landscape
           Maintenance Retaining Walls, French Drains, Custom Mowing Design,
@@ -43,7 +42,7 @@ function Services() {
               height={100}
               width={100}
             />
-            <h4 className=" w-48 text-center pt-4 text-xl">{item.heading}</h4>
+            <h4 className="w-48 text-center pt-4 text-xl">{item.heading}</h4>
           </div>
         ))}
       </div>

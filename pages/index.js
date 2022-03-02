@@ -1,36 +1,32 @@
-import { getContent, getTestimonials } from '../lib/api'
-import Layout from '../components/Layout'
-import Jumbotron from '../components/Jumbotron'
-import About from '../components/About'
-import Gallery from '../components/Gallery'
-import Testimonials from '../components/Testimonials'
-import Footer from '../components/Footer'
-import Contact from '../components/Contact'
-import Services from '../components/Services'
+import { getTestimonials, getHero, getAbout, getGallery } from 'lib/api'
+import Jumbotron from 'components/Jumbotron'
+import Testimonials from '@/components/pages/Testimonials'
+import Contact from '@/components/pages/Contact'
+import Gallery from '@/components/pages/Gallery'
+import Services from '@/components/pages/Services'
+import About from '@/components/pages/About'
 
-export default function Home({ content, testimonials }) {
-  const banner = content.find((item) => item._type === 'banner')
-  const about = content.find((item) => item._type === 'about')
-  const gallery = content.find((item) => item._type === 'gallery')
-
+export default function Home({ gallery, about, testimonials, hero }) {
+  console.log('Hello from Taylor Lawn & Landscaping!');
   return (
-    <Layout>
-      <Jumbotron banner={banner} />
-      <About about={about} />
+    <>
+      <Jumbotron content={hero} />
+      <About content={about} />
       <Services />
-      <Gallery gallery={gallery} />
-      <Testimonials limit={3} testimonials={testimonials} />
+      <Gallery content={gallery} />
+      <Testimonials limit={3} content={testimonials} />
       <Contact />
-      <Footer />
-    </Layout>
+    </>
   )
 }
 
-export async function getStaticProps({ preview = false }) {
-  const content = await getContent(preview)
-  const testimonials = await getTestimonials(preview)
+export async function getStaticProps() {
+  const gallery = await getGallery()
+  const about = await getAbout()
+  const testimonials = await getTestimonials()
+  const hero = await getHero()
   return {
-    props: { content: content, testimonials },
+    props: { testimonials, about, gallery, hero },
     revalidate: 1,
   }
 }

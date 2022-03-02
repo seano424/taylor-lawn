@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import Footer from '../components/Footer'
-import Services from '../components/Services'
+import Services from '../components/pages/Services'
 
 export default function Home() {
   return (

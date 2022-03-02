@@ -1,29 +1,12 @@
 import { useState } from 'react'
-import Card from './Card'
+import Card from '../Card'
 import { motion } from 'framer-motion'
 
-function Gallery({ gallery }) {
-  const [images, setImages] = useState(gallery.images)
-  const softscapes = gallery.images.filter((img) => img.softscape)
-  const hardscapes = gallery.images.filter((img) => img.hardscape)
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
-    },
-  }
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  }
+function Gallery({ content }) {
+  const [images, setImages] = useState(content.images)
+  const softscapes = content.images.filter((img) => img.softscape)
+  const hardscapes = content.images.filter((img) => img.hardscape)
+  
   return (
     <div name="gallery" className="relative">
       <div className="px-10 bg-slate-100 pt-10 pb-20 mb-20">

@@ -32,7 +32,7 @@ a {
 }
 
 .button {
-  @apply bg-emerald-500 hover:bg-white hover:text-emerald-500 border-2 border-emerald-500 transition-colors hover:border-emerald-500 text-white rounded-md py-3 px-8 w-max uppercase font-serif;
+  @apply bg-emerald-700 hover:bg-white hover:text-emerald-500 border-2 border-emerald-700 transition-colors hover:border-emerald-500 text-white rounded-md py-3 px-8 w-max uppercase font-serif;
 }
 
 .swiper-button-prev,

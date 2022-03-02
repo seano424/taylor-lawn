@@ -1,6 +1,6 @@
 import { getTestimonials } from '../lib/api'
 import Layout from '../components/Layout'
-import Testimonials from '../components/Testimonials'
+import Testimonials from '../components/pages/Testimonials'
 import Footer from '../components/Footer'
 
 export default function Home({ testimonials }) {

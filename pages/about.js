@@ -1,24 +1,14 @@
-import { getContent } from '../lib/api'
-import Layout from '../components/Layout'
-import About from '../components/About'
-import Footer from '../components/Footer'
+import { getAbout } from 'lib/api'
+import About from '@/components/pages/About'
 
-export default function Home({ content }) {
-  const about = content.find((item) => item._type === 'about')
-  return (
-    <Layout>
-      <div className="relative lg:top-40">
-        <About about={about} />
-        <Footer />
-      </div>
-    </Layout>
-  )
+export default function AboutPage({content}) {
+  return <About content={content} />
 }
 
-export async function getStaticProps({ preview = false }) {
-  const content = await getContent(preview)
+export async function getStaticProps() {
+  const content = await getAbout()
   return {
-    props: { content: content },
+    props: { content },
     revalidate: 1,
   }
 }

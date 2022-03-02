@@ -1,14 +1,5 @@
-import Layout from '../components/Layout'
-import Footer from '../components/Footer'
-import Contact from '../components/Contact'
+import Contact from '@/components/pages/Contact'
 
 export default function Home() {
-  return (
-    <Layout>
-      <div className="relative lg:top-40">
-        <Contact />
-        <Footer />
-      </div>
-    </Layout>
-  )
+  return <Contact />
 }

@@ -9,7 +9,7 @@ export default function Meta() {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="description"
-        content="Taylor Lawn & Landscaping L.L.C L.L.C. is a Family Owned and Operated Landscape Service Company based in Merriam, Kansas."
+        content="Taylor Lawn & Landscaping L.L.C is a Family Owned and Operated Landscape Service Company based in Merriam, Kansas."
       ></meta>
       <meta
         property="og:title"
@@ -18,7 +18,7 @@ export default function Meta() {
       <meta property="og:image" content="/images/home-image.png" />
       <meta
         property="og:description"
-        content="Taylor Lawn & Landscaping L.L.C L.L.C. is a Family Owned and Operated Landscape Service Company based in Merriam, Kansas."
+        content="Taylor Lawn & Landscaping L.L.C is a Family Owned and Operated Landscape Service Company based in Merriam, Kansas."
       />
       <meta property="og:site_name" content="Taylor Lawn & Landscaping L.L.C" />
       <meta property="og:type" content="website" />
@@ -41,7 +41,7 @@ export default function Meta() {
       />
       <meta
         property="twitter:description"
-        content="Taylor Lawn & Landscaping L.L.C. is a Family Owned and Operated Landscape Service Company based in Merriam, Kansas."
+        content="Taylor Lawn & Landscaping L.L.C is a Family Owned and Operated Landscape Service Company based in Merriam, Kansas."
       />
       <meta property="twitter:image" content="/images/home-image.png" />
     </Head>

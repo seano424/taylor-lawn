@@ -8,7 +8,6 @@ import {
 import { FaFacebook } from 'react-icons/fa'
 import Image from 'next/image'
 import Sidebar from './Sidebar'
-import Headroom from 'react-headroom'
 
 function Header() {
   const { route, push } = useRouter()
@@ -17,7 +16,7 @@ function Header() {
       <div className="z-50 absolute lg:hidden">
         <Sidebar />
       </div>
-      <div className="hidden lg:block top-0 fixed z-50 w-full bg-white px-8 xl:px-20 py-3">
+      <div className="hidden lg:block top-0 left-0 sticky z-50 w-full bg-white px-8 xl:px-20 py-3">
         <div className="flex items-center">
           {/* Image Section Left*/}
           <section className="hidden lg:inline-flex">
@@ -52,7 +51,8 @@ function Header() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <a
+                <a  
+                  rel="noopener"
                   className="flex gap-2"
                   target="_blank"
                   href="https://www.facebook.com/TaylorLawnandLandscaping"

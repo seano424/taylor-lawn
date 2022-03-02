@@ -8,7 +8,7 @@ import {
   ClockIcon,
   MailIcon,
 } from '@heroicons/react/outline'
-import Modal from './Modal'
+import Modal from '../Modal'
 
 function Contact() {
   const [value, setValue] = useState('')
@@ -16,8 +16,8 @@ function Contact() {
   return (
     <>
       <Modal open={open} setOpen={setOpen} />
-      <section className="grid lg:grid-cols-2 gap-10 xl:px-36 py-20 bg-gray-50">
-        <article className="text-emerald-500">
+      <section className="grid lg:grid-cols-2 gap-10 xl:px-36 py-20 bg-gray-50/25">
+        <article className="text-emerald-700">
           <div className="flex flex-col gap-4 items-center text-3xl xl:text-5xl font-black">
             <h2>Contact details</h2>
             <p className="text-gray-600 font-normal text-base">
@@ -30,19 +30,19 @@ function Contact() {
           <div className="contact-icons text-sm sm:text-lg grid grid-cols-2 gap-4 lg:gap-10 my-10 mx-6 lg:m-12 items-center text-center lg:text-left">
             <div className="flex flex-col items-center">
               <LocationMarkerIcon className="w-12" />
-              <h4>Location</h4>
+              <p>Location</p>
               <p className="text-gray-600">Merriam, Kansas</p>
             </div>
             <div className=" flex flex-col items-center">
               <PhoneIcon className="w-12" />
-              <h4>Call Us</h4>
+              <p>Call Us</p>
               <a className="text-gray-600" href="tel:+1-913-206-7214">
                 (913) 206 7214
               </a>
             </div>
             <div className="flex flex-col items-center">
               <MailIcon className="w-12" />
-              <h4>Write to Us</h4>
+              <p>Write to Us</p>
               <a
                 className="text-gray-600 text-xs sm:text-base"
                 href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!"
@@ -52,7 +52,7 @@ function Contact() {
             </div>
             <div className="flex flex-col items-center">
               <ClockIcon className="w-12" />
-              <h4>Working Hours</h4>
+              <p>Working Hours</p>
               <p className="text-gray-600">Monday - Friday:</p>
               <span>8:00-5:00</span>
               <p className="text-gray-600">Saturday:</p>
@@ -94,41 +94,48 @@ function Contact() {
           }}
         >
           <Form className="flex flex-col gap-4 mx-10 lg:mx-0">
-            <h2 className="text-5xl mb-4 text-emerald-500 font-black">
+            <h2 className="text-5xl mb-4 text-emerald-700 font-black">
               Have a question?
             </h2>
-            <label className="text-gray-700 font-thin" htmlFor="name">
+            <label className="text-gray-900 font-thin" htmlFor="name">
               Your Name (Required)
             </label>
             <Field
+              id="name"
+              aria-labelledby="name"
               className="border-gray-300 rounded-md focus:ring-0 focus:border-emerald-500 outline-none"
               name="name"
               type="text"
             />
 
-            <label className="text-gray-700 font-thin" htmlFor="email">
+            <label className="text-gray-900 font-thin" htmlFor="email">
               Email (Required)
             </label>
             <Field
+              id="email"
+              aria-labelledby="email"
               className="border-gray-300 rounded-md focus:ring-0 focus:border-emerald-500 outline-none"
               name="email"
               type="email"
             />
 
-            <label className="text-gray-700 font-thin" htmlFor="subject">
+            <label className="text-gray-900 font-thin" htmlFor="subject">
               Subject
             </label>
             <Field
+              id="subject"
+              aria-labelledby="subject"
               className="border-gray-300 rounded-md focus:ring-0 focus:border-emerald-500 outline-none"
               name="subject"
               type="text"
             />
 
-            <label className="text-gray-700 font-thin" htmlFor="message">
+            <label className="text-gray-900 font-thin" htmlFor="message">
               Message
             </label>
 
             <textarea
+              aria-labelledby="message"
               className="border border-gray-300 rounded-md focus:ring-0 focus:border-emerald-500 outline-none w-full"
               name="message"
               id="message"

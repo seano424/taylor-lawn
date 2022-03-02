@@ -11,6 +11,11 @@ module.exports = {
     },
     debugScreens: {
       position: ['bottom', 'right'],
+      style: {
+        backgroundColor: '#C0FFEE',
+        color: 'black',
+      },
+      prefix: 'screen: ',
     },
   },
   plugins: [
