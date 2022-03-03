@@ -10,6 +10,7 @@ import banner from './banner'
 import about from './about'
 import gallery from './gallery'
 import images from './images'
+import logo from './logo'
 import testimonials from './testimonials'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -21,6 +22,7 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
+    logo,
     banner,
     about,
     gallery,

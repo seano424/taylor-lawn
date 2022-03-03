@@ -18,9 +18,14 @@ function Header() {
       </div>
       <div className="hidden lg:block top-0 left-0 sticky z-50 w-full bg-white px-8 xl:px-20 py-3">
         <div className="flex items-center">
-          {/* Image Section Left*/}
-          <section className="hidden lg:inline-flex">
-            <Image src="/logo.webp" height={150} width={200} />
+          {/* Logo*/}
+          <section className="hidden lg:inline-flex cursor-pointer h-32 w-40">
+            <Image
+              onClick={() => push('/')}
+              src="/logo.webp"
+              height={150}
+              width={150}
+            />
           </section>
           {/* Navbar Section Right */}
           <section className="w-full ml-10">
@@ -51,7 +56,7 @@ function Header() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <a  
+                <a
                   rel="noopener"
                   className="flex gap-2"
                   target="_blank"

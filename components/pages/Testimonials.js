@@ -11,7 +11,7 @@ import 'swiper/css/keyboard'
 
 function Testimonials({ content }) {
   return (
-    <section name="testimonials" className="flex flex-col gap-8 my-20">
+    <section name="testimonials" className="flex flex-col gap-8 my-20 lg:m-20">
       <div className="relative mx-4 md:mx-28 lg:w-max lg:mx-auto">
         <h2 className="text-5xl z-10 mb-2 font-black text-black font-sans text-center relative">
           What Our Clients Say
