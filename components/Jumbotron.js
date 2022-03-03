@@ -15,7 +15,7 @@ function Jumbotron({ content }) {
         src={urlFor(image).url()} 
         layout="fill" 
       />
-      <div className="absolute flex flex-col w-full h-full items-center justify-center text-center">
+      <div className="absolute flex flex-col w-full h-full items-center justify-center text-center lg:-top-12">
         <div className="max-w-7xl inline-flex flex-col gap-7">
           <motion.div
             initial="hidden"
