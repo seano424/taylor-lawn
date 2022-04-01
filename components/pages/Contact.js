@@ -16,7 +16,7 @@ function Contact() {
   return (
     <>
       <Modal open={open} setOpen={setOpen} />
-      <section className="grid lg:grid-cols-2 gap-10 xl:px-36 my-10 bg-gray-50/25 overflow-hidden">
+      <section className="grid lg:grid-cols-2 gap-10 xl:px-36 bg-gray-50/25">
         <article className="text-emerald-700">
           <div className="flex flex-col gap-4 items-center text-lg md:text-3xl xl:text-5xl font-black">
             <h2>Contact details</h2>
