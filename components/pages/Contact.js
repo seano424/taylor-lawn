@@ -18,16 +18,16 @@ function Contact() {
       <Modal open={open} setOpen={setOpen} />
       <section className="grid lg:grid-cols-2 gap-10 xl:px-36 bg-gray-50/25">
         <article className="text-emerald-700">
-          <div className="flex flex-col gap-4 items-center text-lg md:text-3xl xl:text-5xl font-black">
+          <div className="flex flex-col gap-4 items-center text-3xl xl:text-5xl font-black">
             <h2>Contact details</h2>
-            <p className="text-gray-600 font-normal text-xs md:text-base">
+            <p className="text-gray-600 font-normal text-base">
               TXT or CALL for a free estimate today
             </p>
             <a className="font-serif" href="tel:+1-913-206-7214">
               (913) 206 7214
             </a>
           </div>
-          <div className="text-sm sm:text-lg grid md:grid-cols-2 gap-4 lg:gap-10 my-10 mx-6 lg:m-12 items-center text-center lg:text-left">
+          <div className="text-lg grid md:grid-cols-2 gap-4 lg:gap-10 my-10 mx-6 lg:m-12 items-center text-center lg:text-left">
             <div className="flex flex-col items-center">
               <LocationMarkerIcon className="w-6 md:w-12" />
               <p>Location</p>
@@ -43,12 +43,13 @@ function Contact() {
             <div className="flex flex-col items-center">
               <MailIcon className="w-6 md:w-12" />
               <a
+                className='text-gray-600'
                 href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!"
               >
                 Write to Us
               </a>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col gap-1 items-center">
               <ClockIcon className="w-6 md:w-12" />
               <p>Working Hours</p>
               <p className="text-gray-600">Monday - Friday:</p>
@@ -91,7 +92,7 @@ function Contact() {
             setValue('')
           }}
         >
-          <Form className="flex flex-col gap-4 mx-3 lg:mx-0">
+          <Form className="flex flex-col gap-4 mx-auto lg:mx-0 max-w-sm lg:max-w-2xl">
             <h2 className="text-5xl mb-4 text-emerald-700 font-black">
               Have a question?
             </h2>
