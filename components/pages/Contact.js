@@ -16,42 +16,40 @@ function Contact() {
   return (
     <>
       <Modal open={open} setOpen={setOpen} />
-      <section className="grid lg:grid-cols-2 gap-10 xl:px-36 py-20 bg-gray-50/25">
+      <section className="grid lg:grid-cols-2 gap-10 xl:px-36 my-10 bg-gray-50/25 overflow-hidden">
         <article className="text-emerald-700">
-          <div className="flex flex-col gap-4 items-center text-3xl xl:text-5xl font-black">
+          <div className="flex flex-col gap-4 items-center text-lg md:text-3xl xl:text-5xl font-black">
             <h2>Contact details</h2>
-            <p className="text-gray-600 font-normal text-base">
+            <p className="text-gray-600 font-normal text-xs md:text-base">
               TXT or CALL for a free estimate today
             </p>
             <a className="font-serif" href="tel:+1-913-206-7214">
               (913) 206 7214
             </a>
           </div>
-          <div className="contact-icons text-sm sm:text-lg grid grid-cols-2 gap-4 lg:gap-10 my-10 mx-6 lg:m-12 items-center text-center lg:text-left">
+          <div className="text-sm sm:text-lg grid md:grid-cols-2 gap-4 lg:gap-10 my-10 mx-6 lg:m-12 items-center text-center lg:text-left">
             <div className="flex flex-col items-center">
-              <LocationMarkerIcon className="w-12" />
+              <LocationMarkerIcon className="w-6 md:w-12" />
               <p>Location</p>
               <p className="text-gray-600">Merriam, Kansas</p>
             </div>
             <div className=" flex flex-col items-center">
-              <PhoneIcon className="w-12" />
+              <PhoneIcon className="w-6 md:w-12" />
               <p>Call Us</p>
               <a className="text-gray-600" href="tel:+1-913-206-7214">
                 (913) 206 7214
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <MailIcon className="w-12" />
-              <p>Write to Us</p>
+              <MailIcon className="w-6 md:w-12" />
               <a
-                className="text-gray-600 text-xs sm:text-base"
                 href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!"
               >
-                taylorlawn@hotmail.com
+                Write to Us
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <ClockIcon className="w-12" />
+              <ClockIcon className="w-6 md:w-12" />
               <p>Working Hours</p>
               <p className="text-gray-600">Monday - Friday:</p>
               <span>8:00-5:00</span>
