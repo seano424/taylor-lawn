@@ -92,7 +92,7 @@ function Contact() {
             setValue('')
           }}
         >
-          <Form className="flex flex-col gap-4 p-3 mx-auto lg:mx-0 max-w-2xl lg:max-w-full">
+          <Form className="flex flex-col gap-4 p-3 mx-auto sm:mx-0 max-w-sm sm:max-w-full">
             <h2 className="text-5xl mb-4 text-emerald-700 font-black">
               Have a question?
             </h2>
