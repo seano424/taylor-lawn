@@ -50,7 +50,12 @@ const MenuItem = ({ i, text, toggle }) => {
         className={`rounded-md flex-1 py-1 hover:text-emerald-500 uppercase font-bold tracking-widest`}
         style={style}
       >
-        <button onClick={() => handleClick(text)}>{text}</button>
+        <button
+          aria-label={`link to ${text}`}
+          onClick={() => handleClick(text)}
+        >
+          {text}
+        </button>
       </div>
     </motion.li>
   )

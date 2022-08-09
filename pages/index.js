@@ -1,5 +1,5 @@
 import { getTestimonials, getHero, getAbout, getGallery } from 'lib/api'
-import Hero from 'components/Hero'
+import Hero from '@/components/Hero'
 import Testimonials from '@/components/pages/Testimonials'
 import Contact from '@/components/pages/Contact'
 import Gallery from '@/components/pages/Gallery'
