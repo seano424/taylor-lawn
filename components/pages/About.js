@@ -24,19 +24,15 @@ export default function About({ content }) {
             <p>Monday - Friday 8:00 am to 5:00pm</p>
             <p>Saturday - 10:30 am to 2:00 pm</p>
           </div>
-          <div className="relative h-64 lg:h-full w-full shadow-xl">
-            <Image
-              alt="About Page Image"
-              className="object-cover object-bottom rounded-lg "
-              src={imageBuilder(image).url()}
-              layout="fill"
-              priority={true}
-            />
-          </div>
+          <Image
+            alt="About Page Image"
+            className="object-cover object-bottom rounded-lg "
+            src={imageBuilder(image).url()}
+            height="256"
+            width="875"
+          />
         </div>
       </div>
     </section>
   )
 }
-
-
