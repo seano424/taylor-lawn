@@ -1,4 +1,4 @@
-import { getTestimonials, getHero, getAbout, getGallery } from 'lib/api'
+import { getHomePageContent } from 'lib/api'
 import Hero from '@/components/Hero'
 import Testimonials from '@/components/pages/Testimonials'
 import Contact from '@/components/pages/Contact'
@@ -6,8 +6,8 @@ import Gallery from '@/components/pages/Gallery'
 import Services from '@/components/pages/Services'
 import About from '@/components/pages/About'
 
-export default function Home({ gallery, about, testimonials, hero }) {
-  console.log('Hello from Taylor Lawn & Landscaping!');
+export default function Home({home}) {
+  const { gallery, about, hero, testimonials } = home
   return (
     <>
       <Hero content={hero} />
@@ -21,12 +21,9 @@ export default function Home({ gallery, about, testimonials, hero }) {
 }
 
 export async function getStaticProps() {
-  const gallery = await getGallery()
-  const about = await getAbout()
-  const testimonials = await getTestimonials()
-  const hero = await getHero()
+  const home = await getHomePageContent()
   return {
-    props: { testimonials, about, gallery, hero },
+    props: { home },
     revalidate: 1,
   }
 }
