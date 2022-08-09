@@ -1,6 +1,4 @@
-import * as React from 'react'
 import { motion } from 'framer-motion'
-import { scrollTo } from '../utils/scrollTo'
 import { useRouter } from 'next/router'
 
 const variants = {
@@ -52,7 +50,7 @@ const MenuItem = ({ i, text, toggle }) => {
         className={`rounded-md flex-1 py-1 hover:text-emerald-500 uppercase font-bold tracking-widest`}
         style={style}
       >
-        <a onClick={() => handleClick(text)}>{text}</a>
+        <button onClick={() => handleClick(text)}>{text}</button>
       </div>
     </motion.li>
   )
