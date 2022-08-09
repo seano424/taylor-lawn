@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { span, container, header1, header2 } from 'lib/framer'
 
-function Jumbotron({ content }) {
+function Hero({ content }) {
   const { push } = useRouter()
   const { image, subtitle } = content
 
@@ -42,7 +42,7 @@ function Jumbotron({ content }) {
             </button>
             <button
               onClick={() => push('/contact')}
-              className="text-emerald-500 lg:text-lg bg-white rounded-full px-8 py-3 hover:bg-emerald-500 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300 font-bold"
+              className="text-emerald-700 lg:text-lg bg-white rounded-full px-8 py-3 hover:bg-emerald-500 hover:text-white border hover:border-white hover:bg-opacity-50 transition duration-300 font-bold"
             >
               Request an Estimate
             </button>
@@ -53,4 +53,4 @@ function Jumbotron({ content }) {
   )
 }
 
-export default Jumbotron
+export default Hero

@@ -17,10 +17,10 @@ export default function About({ content }) {
         </div>
         <div className="flex flex-col-reverse lg:grid grid-cols-2 gap-10">
           <div className="flex flex-col gap-4 text-gray-800">
-            <h4 className="text-xl font-bold">About our company</h4>
+            <h3 className="text-xl font-bold">About our company</h3>
             <SanityBlockContent blocks={bio1} />
             <SanityBlockContent blocks={bio2} />
-            <h4 className="text-xl font-bold">Office Hours</h4>
+            <h3 className="text-xl font-bold">Office Hours</h3>
             <p>Monday - Friday 8:00 am to 5:00pm</p>
             <p>Saturday - 10:30 am to 2:00 pm</p>
           </div>

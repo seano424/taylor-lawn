@@ -1,5 +1,5 @@
 import { getTestimonials, getHero, getAbout, getGallery } from 'lib/api'
-import Jumbotron from 'components/Jumbotron'
+import Hero from 'components/Hero'
 import Testimonials from '@/components/pages/Testimonials'
 import Contact from '@/components/pages/Contact'
 import Gallery from '@/components/pages/Gallery'
@@ -10,7 +10,7 @@ export default function Home({ gallery, about, testimonials, hero }) {
   console.log('Hello from Taylor Lawn & Landscaping!');
   return (
     <>
-      <Jumbotron content={hero} />
+      <Hero content={hero} />
       <About content={about} />
       <Services />
       <Gallery content={gallery} />
