@@ -24,6 +24,6 @@ export async function getStaticProps() {
   const home = await getHomePageContent()
   return {
     props: { home },
-    revalidate: 1,
+    revalidate: 100000,
   }
 }
