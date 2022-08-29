@@ -1,5 +1,5 @@
 @layer components {
   .button {
-    @apply rounded-full border border-emerald-700 bg-emerald-700 px-8 py-3 font-bold text-white transition duration-300 hover:border-slate-50 hover:bg-opacity-50 hover:text-slate-50 lg:text-lg;
+    @apply rounded-full border border-emerald-700 bg-emerald-700 px-8 py-3 font-bold text-white shadow-lg transition duration-300 hover:border-slate-50 hover:bg-slate-50 hover:text-emerald-700 lg:text-2xl;
   }
 }

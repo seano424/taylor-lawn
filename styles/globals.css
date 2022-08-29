@@ -22,10 +22,6 @@ a {
   text-decoration: none;
 }
 
-.button {
-  @apply w-max rounded-md border-2 border-emerald-700 bg-emerald-700 py-3 px-8 font-serif uppercase text-white transition-colors hover:border-emerald-500 hover:bg-white hover:text-emerald-500;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   @apply hidden text-emerald-300 lg:block !important;

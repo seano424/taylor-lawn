@@ -8,3 +8,11 @@ h5,
 h6 {
   font-family: 'Merriweather', serif;
 }
+
+.h1 {
+  @apply text-4xl font-black text-gray-100 md:text-6xl 2xl:text-7xl;
+}
+
+.h4 {
+  @apply font-serif text-3xl font-bold text-gray-100 lg:text-5xl;
+}

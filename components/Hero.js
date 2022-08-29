@@ -2,31 +2,24 @@ import Link from 'next/link'
 
 function Hero() {
   return (
-    <div className="relative">
+    <div className="relative h-[600px] ">
       <img
-        className="w-full object-cover"
+        className="h-full w-full object-cover"
         alt="Hero Image"
         src="/images/hero.jpeg"
         layout="fill"
         sizes="(min-width: 75em) 100vw,
             90vw"
       />
-      <div className="absolute inset-0 border-8">
-        <h1 className="text-4xl font-black text-gray-100 md:text-6xl 2xl:text-7xl">
-          Taylor Lawn & Landscaping L.L.C.
-        </h1>
-
-        <p className="font-serif text-3xl font-bold text-gray-100 lg:text-5xl ">
-          The True Green Thumb
-        </p>
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 text-center">
+        <h1 className="h1">Taylor Lawn & Landscaping L.L.C.</h1>
+        <h4 className="h4">The True Green Thumb</h4>
         <div className="mx-10 flex flex-col justify-center gap-3 md:flex-row">
           <Link href="/contact">
-            <a className="rounded-full border border-emerald-700 bg-emerald-700 px-8 py-3 font-bold text-white transition duration-300 hover:border-slate-50 hover:bg-opacity-50 hover:text-slate-50 lg:text-lg">
-              Contact us
-            </a>
+            <a className="button">Contact us</a>
           </Link>
           <Link href="/contact">
-            <a className="rounded-full border bg-white px-8 py-3 font-bold text-emerald-700 transition duration-300 hover:border-white hover:bg-emerald-500 hover:bg-opacity-50 hover:text-white lg:text-lg">
+            <a className="button bg-white text-emerald-700 transition duration-300 hover:border-emerald-700 hover:bg-emerald-700 hover:text-white">
               Request an Estimate
             </a>
           </Link>
