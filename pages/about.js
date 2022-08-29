@@ -9,6 +9,6 @@ export async function getStaticProps() {
   const content = await getAbout()
   return {
     props: { content },
-    revalidate: 1,
+    revalidate: 100000,
   }
 }
