@@ -16,33 +16,36 @@ function Header() {
       <div className="absolute z-50 lg:hidden">
         <Sidebar />
       </div>
-      <div className="sticky top-0 left-0 z-50 hidden w-full bg-white px-8 py-3 lg:block xl:px-20">
+      <div className="sticky top-0 left-0 z-50 hidden w-full bg-white px-8 py-3 lg:block 2xl:px-20">
         <div className="flex items-center">
           {/* Logo*/}
-          <section className="hidden h-32 w-40 cursor-pointer lg:inline-flex">
+          <section className="hidden cursor-pointer lg:flex">
             <Image
               onClick={() => push('/')}
-              src="/logo.webp"
-              height={150}
-              width={150}
+              src="/images/logo.jpg"
+              height={188}
+              width={300}
             />
           </section>
           {/* Navbar Section Right */}
           <section className="ml-10 w-full">
-            <div className="hidden w-full justify-between gap-8 border-b border-opacity-40 py-4 text-sm font-thin text-emerald-500 lg:flex xl:text-base">
-              <div className="flex items-center space-x-12">
+            <div className="hidden w-full gap-8 border-b border-opacity-40 py-4 text-sm font-thin text-emerald-500 lg:flex 2xl:text-base">
+              <div className="flex w-full items-center justify-between  space-x-12">
                 <div className="flex items-center gap-2 text-black">
                   <FaPhone className="h-6" />
                   <a
-                    className="font-black xl:text-2xl"
+                    className="font-black 2xl:text-2xl"
                     href="tel:+1-913-206-7214"
                   >
                     (913) 206 7214
                   </a>
                 </div>
-                <div className="flex items-center gap-2 font-bold">
-                  <FaClock className="h-6" />
-                  <span>Mon - Fri: 8:00-5:00/ Sat: 10:30-2:00</span>
+                <div className="hidden items-center gap-4 font-bold xl:flex">
+                  <FaClock className="h-6 w-6" />
+                  <div class="flex flex-col">
+                    <p>Mon - Fri: 8:00-5:00</p>
+                    <p>Sat: 10:30-2:00</p>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2 font-bold text-black">
                   <FaMailBulk className="h-6" />
@@ -52,10 +55,11 @@ function Header() {
                 </div>
                 <div className="flex items-center gap-2">
                   <FaSearchLocation className="h-6" />
-                  <span className="font-black">Kansas City Metro Area</span>
+                  <span className="22xl:block hidden font-black">
+                    Kansas City Metro Area
+                  </span>
+                  <span className="22xl:hidden font-black">KCMO</span>
                 </div>
-              </div>
-              <div className="flex items-center gap-2">
                 <a
                   rel="noopener"
                   className="flex gap-2"
