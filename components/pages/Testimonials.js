@@ -1,8 +1,6 @@
 import Testimonial from '../Testimonial'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, A11y, Keyboard } from 'swiper'
-import 'swiper/css/bundle'
-
 function Testimonials({ content }) {
   return (
     <section name="testimonials" className="my-20 flex flex-col gap-8 lg:m-20">

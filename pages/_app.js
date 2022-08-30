@@ -2,6 +2,7 @@ import 'styles/globals.css'
 import { ModalProvider } from 'context/ModalContext'
 import Layout from 'components/Layout'
 import { LazyMotion, domAnimation } from 'framer-motion'
+import 'swiper/css/bundle'
 
 function MyApp({ Component, pageProps }) {
   return (
