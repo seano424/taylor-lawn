@@ -18,7 +18,7 @@ function Gallery({ content }) {
         </div>
         <ul className="flex justify-center gap-3 py-8 text-xl font-semibold lg:gap-10">
           <li
-            onClick={() => setImages(gallery.images)}
+            onClick={() => setImages(content.images)}
             className={`cursor-pointer tracking-tight hover:text-emerald-500`}
           >
             All
