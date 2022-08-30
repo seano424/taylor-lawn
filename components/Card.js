@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import { urlFor } from '../lib/client'
-import { motion, AnimatePresence } from 'framer-motion'
+import { m, AnimatePresence } from 'framer-motion'
 function Card({ i, idx }) {
   const [open, setOpen] = useState(false)
   const [clickedIdx, setClickedIdx] = useState(0)
@@ -25,7 +25,7 @@ function Card({ i, idx }) {
 
   return (
     <>
-      <motion.div
+      <m.div
         variants={item}
         initial="hidden"
         animate="visible"
@@ -42,10 +42,10 @@ function Card({ i, idx }) {
           layout="fill"
         />
         <div className="absolute h-full w-full transition duration-200 ease-linear group-hover:bg-gray-100 group-hover:bg-opacity-5 group-hover:shadow-xl" />
-      </motion.div>
+      </m.div>
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             layoutId={i}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -57,14 +57,14 @@ function Card({ i, idx }) {
             onClick={() => handleShowModal(i, idx)}
             className="fixed top-0 left-0 right-0 bottom-0 z-50 bg-white bg-opacity-90"
           >
-            <motion.div className="fixed left-1/2 top-16 z-20 h-5/6 w-full max-w-screen-lg -translate-x-1/2 transform rounded border-8 border-black text-white">
+            <m.div className="fixed left-1/2 top-16 z-20 h-5/6 w-full max-w-screen-lg -translate-x-1/2 transform rounded border-8 border-black text-white">
               <Image
                 className="rounded object-cover"
                 src={urlFor(i.image).url()}
                 layout="fill"
               />
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

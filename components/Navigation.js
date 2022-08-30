@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import MenuItem from './MenuItem'
 import { useRouter } from 'next/router'
 
@@ -37,20 +37,20 @@ const Navigation = ({ open, toggle }) => {
   }
 
   return (
-    <motion.ul className={`menu-ul ${!open && 'hidden'}`} variants={variants}>
-      <motion.h1
+    <m.ul className={`menu-ul ${!open && 'hidden'}`} variants={variants}>
+      <m.h1
         onClick={handleHeader}
         variants={header}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="rounded-md flex-1 pb-4 flex-wrap text-sky-900 hover:text-emerald-500 uppercase font-black tracking-widest text-xl font-sans cursor-pointer"
+        className="flex-1 cursor-pointer flex-wrap rounded-md pb-4 font-sans text-xl font-black uppercase tracking-widest text-sky-900 hover:text-emerald-500"
       >
         Taylor Lawn & Landscaping L.L.C
-      </motion.h1>
+      </m.h1>
       {menuItems.map((item, idx) => (
         <MenuItem toggle={toggle} i={idx} text={item} key={idx} />
       ))}
-    </motion.ul>
+    </m.ul>
   )
 }
 

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useRouter } from 'next/router'
 
 const variants = {
@@ -40,7 +40,7 @@ const MenuItem = ({ i, text, toggle }) => {
     }, 800)
   }
   return (
-    <motion.li
+    <m.li
       className="menu-li"
       variants={variants}
       whileHover={{ scale: 1 }}
@@ -58,7 +58,7 @@ const MenuItem = ({ i, text, toggle }) => {
           {text}
         </button>
       </div>
-    </motion.li>
+    </m.li>
   )
 }
 

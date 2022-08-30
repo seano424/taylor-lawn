@@ -1,8 +1,7 @@
-import * as React from 'react'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 
 const Path = (props) => (
-  <motion.path
+  <m.path
     fill="transparent"
     strokeWidth="3"
     stroke="hsl(0, 0%, 18%)"
@@ -12,7 +11,11 @@ const Path = (props) => (
 )
 
 const MenuToggle = ({ toggle }) => (
-  <button aria-label='button to toggle the menu' className="button-toggle" onClick={toggle}>
+  <button
+    aria-label="button to toggle the menu"
+    className="button-toggle"
+    onClick={toggle}
+  >
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{

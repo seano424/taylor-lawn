@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import useDimensions from '../hooks/use-dimension'
 import MenuToggle from './MenuToggle'
 import Navigation from './Navigation'
@@ -35,20 +35,20 @@ const Sidebar = () => {
   })
 
   return (
-    <motion.nav
+    <m.nav
       className="nav absolute z-50 lg:hidden"
       initial={false}
       animate={open ? 'open' : 'closed'}
       custom={height}
       ref={containerRef}
     >
-      <motion.div className="background" variants={sidebar} />
+      <m.div className="background" variants={sidebar} />
       <Navigation
         open={open}
         toggle={() => setOpen((prevState) => !prevState)}
       />
       <MenuToggle toggle={() => setOpen((prevState) => !prevState)} />
-    </motion.nav>
+    </m.nav>
   )
 }
 
