@@ -1,16 +1,12 @@
 import SanityBlockContent from '@sanity/block-content-to-react'
 import { imageBuilder } from 'lib/client'
 import Image from 'next/image'
-import { Element } from 'react-scroll'
 
 export default function About({ content }) {
   const { bio1, bio2, image } = content
   return (
     <section>
-      <Element
-        name="about"
-        className="bg-gray-50 p-10 text-center text-lg lg:p-20"
-      >
+      <div className="bg-gray-50 p-10 text-center text-lg lg:p-20">
         <div className="flex flex-col gap-6 pb-8 md:pb-16">
           <h1 className="text-4xl font-black text-emerald-700 md:text-6xl ">
             Taylor Lawn & Landscaping, L.L.C.
@@ -36,7 +32,7 @@ export default function About({ content }) {
             width="875"
           />
         </div>
-      </Element>
+      </div>
     </section>
   )
 }
