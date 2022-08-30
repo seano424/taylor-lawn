@@ -36,7 +36,7 @@ const Sidebar = () => {
 
   return (
     <motion.nav
-      className="nav"
+      className="nav absolute z-50 lg:hidden"
       initial={false}
       animate={open ? 'open' : 'closed'}
       custom={height}
