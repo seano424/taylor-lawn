@@ -9,6 +9,33 @@ import {
   FaMailBulk,
 } from 'react-icons/fa'
 
+const links = [
+  {
+    url: '/',
+    title: 'Home',
+  },
+  {
+    url: '/services',
+    title: 'Services',
+  },
+  {
+    url: '/about',
+    title: 'About',
+  },
+  {
+    url: '/gallery',
+    title: 'Gallery',
+  },
+  {
+    url: '/testimonials',
+    title: 'Testimonials',
+  },
+  {
+    url: '/contact',
+    title: 'Contact',
+  },
+]
+
 function Header() {
   const { route } = useRouter()
   return (
@@ -65,60 +92,17 @@ function Header() {
 
         {/* Bottom Navigation */}
         <div className="relative hidden flex-1 items-center justify-between gap-8 pt-6 font-serif text-lg text-gray-800 lg:flex">
-          <Link href="/">
-            <a
-              className={`${
-                route === '/' ? 'font-black text-emerald-500' : ''
-              } hover:text-emerald-500`}
-            >
-              Home
-            </a>
-          </Link>
-          <Link href="/about">
-            <a
-              className={`${
-                route === '/about' ? 'font-black text-emerald-500' : ''
-              } hover:text-emerald-500`}
-            >
-              About
-            </a>
-          </Link>
-          <Link href="/services">
-            <a
-              className={`${
-                route === '/services' ? 'font-black text-emerald-500' : ''
-              } hover:text-emerald-500`}
-            >
-              Service
-            </a>
-          </Link>
-          <Link href="/gallery">
-            <a
-              className={`${
-                route === '/gallery' ? 'font-black text-emerald-500' : ''
-              } hover:text-emerald-500`}
-            >
-              Gallery
-            </a>
-          </Link>
-          <Link href="/testimonials">
-            <a
-              className={`${
-                route === '/testimonials' ? 'font-black text-emerald-500' : ''
-              } hover:text-emerald-500`}
-            >
-              Testimonials
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a
-              className={`${
-                route === '/contact' ? 'font-black text-emerald-500' : ''
-              } hover:text-emerald-500`}
-            >
-              Contact
-            </a>
-          </Link>
+          {links.map((link) => (
+            <Link key={link.title} href={link.url}>
+              <a
+                className={`${
+                  route === link.url ? 'font-black text-emerald-500' : ''
+                } hover:text-emerald-500`}
+              >
+                {link.title}
+              </a>
+            </Link>
+          ))}
           <Link href="/contact">
             <a className="rounded-full bg-emerald-500 py-2 px-6 text-[15px] font-thin tracking-wide text-white">
               Free Quote
