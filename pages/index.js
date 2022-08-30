@@ -6,16 +6,16 @@ import Gallery from '@/components/pages/Gallery'
 import Services from '@/components/pages/Services'
 import About from '@/components/pages/About'
 
-export default function Home({home}) {
+export default function Home({ home }) {
   const { gallery, about, hero, testimonials } = home
   return (
     <>
       <Hero content={hero} />
-      <About content={about} />
+      {/* <About content={about} />
       <Services />
       <Gallery content={gallery} />
       <Testimonials limit={3} content={testimonials} />
-      <Contact />
+      <Contact /> */}
     </>
   )
 }

@@ -1,21 +1,25 @@
 import SanityBlockContent from '@sanity/block-content-to-react'
 import { imageBuilder } from 'lib/client'
 import Image from 'next/image'
+import { Element } from 'react-scroll'
 
 export default function About({ content }) {
   const { bio1, bio2, image } = content
   return (
     <section>
-      <div name="about" className="p-10 lg:p-20 text-center bg-gray-50 text-lg">
-        <div className="pb-8 md:pb-16 flex flex-col gap-6">
-          <h1 className="text-4xl md:text-6xl font-black text-emerald-500 ">
+      <Element
+        name="about"
+        className="bg-gray-50 p-10 text-center text-lg lg:p-20"
+      >
+        <div className="flex flex-col gap-6 pb-8 md:pb-16">
+          <h1 className="text-4xl font-black text-emerald-700 md:text-6xl ">
             Taylor Lawn & Landscaping, L.L.C.
           </h1>
-          <h2 className="text-2xl text-gray-900 md:text-4xl font-bold font-sans italic">
+          <h2 className="font-sans text-2xl font-bold italic text-gray-900 md:text-4xl">
             "The True Green Thumb!"
           </h2>
         </div>
-        <div className="flex flex-col-reverse lg:grid grid-cols-2 gap-10">
+        <div className="flex grid-cols-2 flex-col-reverse gap-10 lg:grid">
           <div className="flex flex-col gap-4 text-gray-800">
             <h3 className="text-xl font-bold">About our company</h3>
             <SanityBlockContent blocks={bio1} />
@@ -26,13 +30,13 @@ export default function About({ content }) {
           </div>
           <Image
             alt="About Page Image"
-            className="object-cover object-bottom rounded-lg "
+            className="rounded-lg object-cover object-bottom "
             src={imageBuilder(image).url()}
             height="256"
             width="875"
           />
         </div>
-      </div>
+      </Element>
     </section>
   )
 }
