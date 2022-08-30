@@ -38,7 +38,7 @@ function Header() {
             </div>
             <div className="hidden items-center gap-4 font-bold xl:flex">
               <FaClock className="h-6 w-6" />
-              <div class="flex flex-col">
+              <div className="flex flex-col">
                 <p>Mon - Fri: 8:00-5:00</p>
                 <p>Sat: 10:30-2:00</p>
               </div>

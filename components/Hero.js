@@ -1,21 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { urlFor } from 'lib/client'
 
-function Hero() {
+function Hero({ content }) {
   return (
     <div className="relative min-h-[600px]">
       <Image
         className="h-full w-full object-cover"
         alt="Hero Image"
-        src="/images/hero.jpeg"
+        src={urlFor(content.image).url()}
         layout="fill"
+        priority
         sizes="(min-width: 75em) 100vw,
             90vw"
       />
       <div className="absolute inset-0 border">
         <div className="flex h-full flex-col items-center justify-center gap-5 text-center">
-          <h1 className="h1">Taylor Lawn & Landscaping L.L.C.</h1>
-          <p className="h4">The True Green Thumb</p>
+          <h1 className="h1">{content.title}</h1>
+          <p className="h4">{content.subtitle}</p>
           <div className="mx-10 flex flex-col justify-center gap-3 md:flex-row">
             <Link href="/contact">
               <a className="button">Contact us</a>

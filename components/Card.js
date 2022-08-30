@@ -2,12 +2,10 @@ import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import { urlFor } from '../lib/client'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useDisableBodyScroll } from '../hooks/use-disable-body'
-function Card({ i, idx, variants }) {
+function Card({ i, idx }) {
   const [open, setOpen] = useState(false)
   const [clickedIdx, setClickedIdx] = useState(0)
   const containerRef = useRef()
-  // useDisableBodyScroll(open)
 
   const handleShowModal = (i, idx) => {
     setOpen((prevState) => !prevState)
@@ -33,17 +31,17 @@ function Card({ i, idx, variants }) {
         animate="visible"
         onClick={() => handleShowModal(i, idx)}
         layoutId={i}
-        className={`relative h-40 sm:h-48 md:h-52 lg:h-64 xl:h-72 w-full shadow-lg cursor-pointer group ${
+        className={`group relative h-40 w-full cursor-pointer shadow-lg sm:h-48 md:h-52 lg:h-64 xl:h-72 ${
           clickedIdx === idx && 'z-10'
         }`}
       >
         <Image
-          className="rounded object-cover group-hover:scale-105 transition duration-200 ease-linear"
+          className="rounded object-cover transition duration-200 ease-linear group-hover:scale-105"
           src={urlFor(i.image).url()}
           alt="Landscaping image"
           layout="fill"
         />
-        <div className="absolute h-full w-full group-hover:shadow-xl group-hover:bg-gray-100 group-hover:bg-opacity-5 transition duration-200 ease-linear" />
+        <div className="absolute h-full w-full transition duration-200 ease-linear group-hover:bg-gray-100 group-hover:bg-opacity-5 group-hover:shadow-xl" />
       </motion.div>
       <AnimatePresence>
         {open && (
@@ -57,9 +55,9 @@ function Card({ i, idx, variants }) {
             style={{ pointerEvents: 'auto' }}
             ref={containerRef}
             onClick={() => handleShowModal(i, idx)}
-            className="bg-white bg-opacity-90 fixed top-0 left-0 right-0 bottom-0 z-50"
+            className="fixed top-0 left-0 right-0 bottom-0 z-50 bg-white bg-opacity-90"
           >
-            <motion.div className="fixed left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg z-20 top-16 text-white h-5/6 border-8 border-black rounded">
+            <motion.div className="fixed left-1/2 top-16 z-20 h-5/6 w-full max-w-screen-lg -translate-x-1/2 transform rounded border-8 border-black text-white">
               <Image
                 className="rounded object-cover"
                 src={urlFor(i.image).url()}
