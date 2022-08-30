@@ -9,7 +9,8 @@ function Hero({ content }) {
         className="h-full w-full object-cover"
         alt="Hero Image"
         src={imageBuilder(content.image).width(1680).height(600).url()}
-        layout="fill"
+        width="1680"
+        height="600"
         priority
       />
       <div className="absolute inset-0 border">
