@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import {
-  PhoneIcon,
-  MailIcon,
-  LocationMarkerIcon,
-  ClockIcon,
-} from '@heroicons/react/solid'
-import { FaFacebook } from 'react-icons/fa'
+  FaFacebook,
+  FaClock,
+  FaPhone,
+  FaSearchLocation,
+  FaMailBulk,
+} from 'react-icons/fa'
 import Sidebar from './Sidebar'
 
 function Header() {
@@ -32,7 +32,7 @@ function Header() {
             <div className="hidden w-full justify-between gap-8 border-b border-opacity-40 py-4 text-sm font-thin text-emerald-500 lg:flex xl:text-base">
               <div className="flex items-center space-x-12">
                 <div className="flex items-center gap-2 text-black">
-                  <PhoneIcon className="h-6" />
+                  <FaPhone className="h-6" />
                   <a
                     className="font-black xl:text-2xl"
                     href="tel:+1-913-206-7214"
@@ -41,17 +41,17 @@ function Header() {
                   </a>
                 </div>
                 <div className="flex items-center gap-2 font-bold">
-                  <ClockIcon className="h-6" />
+                  <FaClock className="h-6" />
                   <span>Mon - Fri: 8:00-5:00/ Sat: 10:30-2:00</span>
                 </div>
                 <div className="flex items-center gap-2 font-bold text-black">
-                  <MailIcon className="h-6" />
+                  <FaMailBulk className="h-6" />
                   <a href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!">
                     taylorlawn@hotmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <LocationMarkerIcon className="h-6" />
+                  <FaSearchLocation className="h-6" />
                   <span className="font-black">Kansas City Metro Area</span>
                 </div>
               </div>
