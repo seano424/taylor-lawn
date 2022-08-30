@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const iconItems = [
   { heading: 'Landscape Designing', icon: 'pruning' },
@@ -9,7 +9,6 @@ const iconItems = [
 ]
 
 function Services() {
-  const { push } = useRouter()
   return (
     <section className="my-10 grid gap-10 bg-white p-10 lg:mt-0 lg:grid-cols-2 xl:p-20">
       <div className="flex flex-col justify-center gap-8">
@@ -23,12 +22,9 @@ function Services() {
           Renovation Irrigation System Service and Installation, and Snow
           Removal and Ice Management.
         </p>
-        <button
-          onClick={() => push('/contact')}
-          className="button w-max lg:text-3xl"
-        >
-          Contact Us
-        </button>
+        <Link href="/contact">
+          <a className="button w-max lg:text-3xl">Contact Us</a>
+        </Link>
       </div>
       <div className="hidden grid-cols-2 gap-10 lg:grid">
         {iconItems.map((item) => (
