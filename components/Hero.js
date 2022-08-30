@@ -6,11 +6,12 @@ function Hero({ content }) {
   return (
     <div className="relative min-h-[600px]">
       <Image
-        className="h-full w-full object-cover"
+        className="min-h-[1200px] w-full object-cover"
         alt="Hero Image"
         src={imageBuilder(content.image).width(1680).height(600).url()}
         width="1680"
         height="600"
+        layout="fixed"
         priority
       />
       <div className="absolute inset-0 border">
