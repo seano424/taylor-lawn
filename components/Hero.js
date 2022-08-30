@@ -3,15 +3,13 @@ import Image from 'next/image'
 
 function Hero() {
   return (
-    <div className="relative h-[600px] ">
+    <div className="relative">
       <Image
         className="h-full w-full object-cover"
         alt="Hero Image"
         src="/images/hero.jpeg"
-        layout="fill"
-        priority
-        sizes="(min-width: 75em) 100vw,
-            90vw"
+        height="700"
+        width="1680"
       />
       <div className="absolute inset-0 border">
         <div className="flex h-full flex-col items-center justify-center gap-5 text-center">
