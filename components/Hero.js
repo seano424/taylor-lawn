@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { urlFor } from 'lib/client'
+import { imageBuilder } from 'lib/client'
 
 function Hero({ content }) {
   return (
@@ -8,7 +8,7 @@ function Hero({ content }) {
       <Image
         className="h-full w-full object-cover"
         alt="Hero Image"
-        src={urlFor(content.image).url()}
+        src={imageBuilder(content.image).width(1680).height(600).url()}
         layout="fill"
         priority
         sizes="(min-width: 75em) 100vw,

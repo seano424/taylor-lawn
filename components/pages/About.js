@@ -27,9 +27,9 @@ export default function About({ content }) {
           <Image
             alt="About Page Image"
             className="rounded-lg object-cover object-bottom "
-            src={imageBuilder(image).url()}
-            height="256"
-            width="875"
+            src={imageBuilder(image).width(740).height(472).url()}
+            height="472"
+            width="740"
           />
         </div>
       </div>
