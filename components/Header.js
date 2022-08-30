@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 import {
   PhoneIcon,
   MailIcon,
@@ -6,20 +7,19 @@ import {
   ClockIcon,
 } from '@heroicons/react/solid'
 import { FaFacebook } from 'react-icons/fa'
-import Image from 'next/image'
 import Sidebar from './Sidebar'
 
 function Header() {
   const { route, push } = useRouter()
   return (
     <nav>
-      <div className="z-50 absolute lg:hidden">
+      <div className="absolute z-50 lg:hidden">
         <Sidebar />
       </div>
-      <div className="hidden lg:block top-0 left-0 sticky z-50 w-full bg-white px-8 xl:px-20 py-3">
+      <div className="sticky top-0 left-0 z-50 hidden w-full bg-white px-8 py-3 lg:block xl:px-20">
         <div className="flex items-center">
           {/* Logo*/}
-          <section className="hidden lg:inline-flex cursor-pointer h-32 w-40">
+          <section className="hidden h-32 w-40 cursor-pointer lg:inline-flex">
             <Image
               onClick={() => push('/')}
               src="/logo.webp"
@@ -28,8 +28,8 @@ function Header() {
             />
           </section>
           {/* Navbar Section Right */}
-          <section className="w-full ml-10">
-            <div className="hidden lg:flex justify-between w-full gap-8 border-b border-opacity-40 py-4 text-emerald-500 font-thin text-sm xl:text-base">
+          <section className="ml-10 w-full">
+            <div className="hidden w-full justify-between gap-8 border-b border-opacity-40 py-4 text-sm font-thin text-emerald-500 lg:flex xl:text-base">
               <div className="flex items-center space-x-12">
                 <div className="flex items-center gap-2 text-black">
                   <PhoneIcon className="h-6" />
@@ -62,16 +62,16 @@ function Header() {
                   target="_blank"
                   href="https://www.facebook.com/TaylorLawnandLandscaping"
                 >
-                  <FaFacebook className="w-6 h-6" />
+                  <FaFacebook className="h-6 w-6" />
                 </a>
               </div>
             </div>
-            <nav className="flex items-center relative text-gray-800 text-lg pt-6">
-              <ul className="hidden lg:flex gap-8 items-center flex-1 justify-between font-serif">
+            <nav className="relative flex items-center pt-6 text-lg text-gray-800">
+              <ul className="hidden flex-1 items-center justify-between gap-8 font-serif lg:flex">
                 <a
                   href="/"
                   className={`${
-                    route === '/' ? 'text-emerald-500 font-black' : ''
+                    route === '/' ? 'font-black text-emerald-500' : ''
                   } hover:text-emerald-500`}
                 >
                   Home
@@ -79,7 +79,7 @@ function Header() {
                 <a
                   href="/about"
                   className={`${
-                    route === '/about' ? 'text-emerald-500 font-black' : ''
+                    route === '/about' ? 'font-black text-emerald-500' : ''
                   } hover:text-emerald-500`}
                 >
                   About
@@ -87,7 +87,7 @@ function Header() {
                 <a
                   href="/services"
                   className={`${
-                    route === '/services' ? 'text-emerald-500 font-black' : ''
+                    route === '/services' ? 'font-black text-emerald-500' : ''
                   } hover:text-emerald-500`}
                 >
                   Service
@@ -95,7 +95,7 @@ function Header() {
                 <a
                   href="/gallery"
                   className={`${
-                    route === '/gallery' ? 'text-emerald-500 font-black' : ''
+                    route === '/gallery' ? 'font-black text-emerald-500' : ''
                   } hover:text-emerald-500`}
                 >
                   Gallery
@@ -104,7 +104,7 @@ function Header() {
                   href="/testimonials"
                   className={`${
                     route === '/testimonials'
-                      ? 'text-emerald-500 font-black'
+                      ? 'font-black text-emerald-500'
                       : ''
                   } hover:text-emerald-500`}
                 >
@@ -113,7 +113,7 @@ function Header() {
                 <a
                   href="/contact"
                   className={`${
-                    route === '/contact' ? 'text-emerald-500 font-black' : ''
+                    route === '/contact' ? 'font-black text-emerald-500' : ''
                   } hover:text-emerald-500`}
                 >
                   Contact
@@ -121,7 +121,7 @@ function Header() {
 
                 <button
                   onClick={() => push('/contact')}
-                  className="bg-emerald-500 text-white font-thin rounded-full py-2 px-6 text-[15px] tracking-wide"
+                  className="rounded-full bg-emerald-500 py-2 px-6 text-[15px] font-thin tracking-wide text-white"
                 >
                   Free Quote
                 </button>

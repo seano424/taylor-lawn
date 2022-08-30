@@ -1,13 +1,15 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 function Hero() {
   return (
     <div className="relative h-[600px] ">
-      <img
+      <Image
         className="h-full w-full object-cover"
         alt="Hero Image"
         src="/images/hero.jpeg"
         layout="fill"
+        priority
         sizes="(min-width: 75em) 100vw,
             90vw"
       />
