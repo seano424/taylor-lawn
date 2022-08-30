@@ -11,8 +11,6 @@ function Hero({ content }) {
         src={imageBuilder(content.image).width(1680).height(600).url()}
         layout="fill"
         priority
-        sizes="(min-width: 75em) 100vw,
-            90vw"
       />
       <div className="absolute inset-0 border">
         <div className="flex h-full flex-col items-center justify-center gap-5 text-center">

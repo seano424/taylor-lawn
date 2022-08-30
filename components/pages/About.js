@@ -9,11 +9,12 @@ export default function About({ content }) {
       <div className="bg-gray-50 p-10 text-center text-lg lg:p-20">
         <div className="flex flex-col gap-6 pb-8 md:pb-16">
           <h1 className="text-4xl font-black text-emerald-700 md:text-6xl ">
-            Taylor Lawn & Landscaping, L.L.C.
+            About Us
           </h1>
-          <h2 className="font-sans text-2xl font-bold italic text-gray-900 md:text-4xl">
+          <p className="font-sans text-2xl font-bold italic text-gray-900 md:text-4xl">
+            Taylor Lawn & Landscaping, L.L.C. <br />
             "The True Green Thumb!"
-          </h2>
+          </p>
         </div>
         <div className="flex grid-cols-2 flex-col-reverse gap-10 lg:grid">
           <div className="flex flex-col gap-4 text-gray-800">
