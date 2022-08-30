@@ -8,7 +8,6 @@ import {
   FaSearchLocation,
   FaMailBulk,
 } from 'react-icons/fa'
-import Sidebar from './Sidebar'
 
 function Header() {
   const { route } = useRouter()
