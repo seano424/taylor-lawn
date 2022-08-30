@@ -11,12 +11,12 @@ const iconItems = [
 function Services() {
   const { push } = useRouter()
   return (
-    <section className="grid lg:grid-cols-2 p-4 xl:p-20 my-10 lg:mt-0 bg-white">
-      <div className="flex flex-col gap-8 justify-between items-center text-center">
-        <h2 className="text-3xl lg:text-5xl text-emerald-700 font-black">
+    <section className="my-10 grid gap-10 bg-white p-10 lg:mt-0 lg:grid-cols-2 xl:p-20">
+      <div className="flex flex-col justify-center gap-8">
+        <h2 className="text-3xl font-black text-emerald-700 lg:text-5xl">
           We offer Hard & Soft Landscape Solutions
         </h2>
-        <p className="text-gray-900 lg:text-xl tracking-wide leading-relaxed max-w-xl">
+        <p className="tracking-wide text-gray-900 lg:text-xl">
           Whether you're looking for hard or soft landscape solutions, we've got
           you covered. Our services include 3D Image Design and Build, Landscape
           Maintenance Retaining Walls, French Drains, Custom Mowing Design,
@@ -25,16 +25,16 @@ function Services() {
         </p>
         <button
           onClick={() => push('/contact')}
-          className="button mx-auto lg:text-3xl"
+          className="button w-max lg:text-3xl"
         >
           Contact Us
         </button>
       </div>
-      <div className="hidden lg:grid grid-cols-2 gap-10">
+      <div className="hidden grid-cols-2 gap-10 lg:grid">
         {iconItems.map((item) => (
           <div
             key={item.icon}
-            className="flex flex-col items-center justify-center shadow p-5"
+            className="flex flex-col items-center justify-center rounded-lg p-5 shadow-lg"
           >
             <Image
               src={`/images/${item.icon}.png`}
@@ -42,7 +42,7 @@ function Services() {
               height={100}
               width={100}
             />
-            <h4 className="w-48 text-center pt-4 text-xl">{item.heading}</h4>
+            <h4 className="w-48 pt-4 text-center text-xl">{item.heading}</h4>
           </div>
         ))}
       </div>
