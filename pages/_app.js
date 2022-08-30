@@ -1,6 +1,5 @@
 import 'styles/globals.css'
 import { ModalProvider } from 'context/ModalContext'
-import 'swiper/css/bundle'
 import Layout from 'components/Layout'
 import { LazyMotion, domAnimation } from 'framer-motion'
 
