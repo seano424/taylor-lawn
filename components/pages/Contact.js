@@ -12,7 +12,7 @@ function Contact() {
   return (
     <>
       <Modal open={open} setOpen={setOpen} />
-      <section className="grid gap-10 bg-gray-50/25 lg:grid-cols-2 xl:px-36">
+      <section className="py-base grid gap-10 bg-gray-50/25 lg:grid-cols-2 xl:px-36">
         <article className="text-emerald-700">
           <div className="flex flex-col items-center gap-4 text-3xl font-black xl:text-5xl">
             <h2>Contact details</h2>
@@ -88,7 +88,7 @@ function Contact() {
             setValue('')
           }}
         >
-          <Form className="mx-auto flex max-w-sm flex-col gap-4 p-3 sm:mx-0 sm:max-w-full">
+          <Form className="mx-auto flex max-w-sm flex-col gap-4  px-3 sm:mx-0 sm:max-w-full">
             <h2 className="mb-4 text-5xl font-black text-emerald-700">
               Have a question?
             </h2>

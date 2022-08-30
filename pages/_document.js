@@ -4,7 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className={`debug-screens scroll-smooth`}>
+      <body
+        className={`${process.env.DEV_MODE && 'debug-screens'} scroll-smooth`}
+      >
         <Main />
         <NextScript />
       </body>

@@ -10,7 +10,7 @@ const iconItems = [
 
 function Services() {
   return (
-    <section className="my-10 grid gap-10 bg-white p-10 lg:mt-0 lg:grid-cols-2 xl:p-20">
+    <section className="py-base grid gap-10 bg-white p-10 lg:mt-0 lg:grid-cols-2 xl:p-20">
       <div className="flex flex-col justify-center gap-8">
         <h2 className="text-3xl font-black text-emerald-700 lg:text-5xl">
           We offer Hard & Soft Landscape Solutions
