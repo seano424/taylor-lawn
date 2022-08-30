@@ -13,10 +13,10 @@ function Hero() {
         sizes="(min-width: 75em) 100vw,
             90vw"
       />
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 border">
         <div className="flex h-full flex-col items-center justify-center gap-5 text-center">
           <h1 className="h1">Taylor Lawn & Landscaping L.L.C.</h1>
-          <h4 className="h4">The True Green Thumb</h4>
+          <p className="h4">The True Green Thumb</p>
           <div className="mx-10 flex flex-col justify-center gap-3 md:flex-row">
             <Link href="/contact">
               <a className="button">Contact us</a>
