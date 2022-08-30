@@ -43,16 +43,17 @@ const MenuItem = ({ i, text, toggle }) => {
     <motion.li
       className="menu-li"
       variants={variants}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1 }}
       whileTap={{ scale: 0.95 }}
     >
       <div
-        className={`rounded-md flex-1 py-1 hover:text-emerald-500 uppercase font-bold tracking-widest`}
+        className={`flex-1 rounded-md py-1 font-bold uppercase tracking-widest hover:text-emerald-500`}
         style={style}
       >
         <button
           aria-label={`link to ${text}`}
           onClick={() => handleClick(text)}
+          className="mt-2 text-xl font-semibold uppercase transition-all duration-300 hover:opacity-80"
         >
           {text}
         </button>
