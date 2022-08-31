@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Image from 'next/image'
-import { urlFor } from '../lib/client'
+import { imageBuilder } from '../lib/client'
 import { m, AnimatePresence } from 'framer-motion'
-function Card({ i, idx }) {
+
+function GalleryCard({ i, idx }) {
   const [open, setOpen] = useState(false)
   const [clickedIdx, setClickedIdx] = useState(0)
   const containerRef = useRef()
@@ -25,24 +26,23 @@ function Card({ i, idx }) {
 
   return (
     <>
-      <m.div
+      <m.button
+        aria-label="Gallery Images"
         variants={item}
         initial="hidden"
         animate="visible"
         onClick={() => handleShowModal(i, idx)}
         layoutId={i}
-        className={`group relative h-40 w-full cursor-pointer shadow-lg sm:h-48 md:h-52 lg:h-64 xl:h-72 ${
-          clickedIdx === idx && 'z-10'
-        }`}
+        className={`group cursor-pointer  ${clickedIdx === idx && 'z-10'}`}
       >
         <Image
           className="rounded object-cover transition duration-200 ease-linear group-hover:scale-105"
-          src={urlFor(i.image).url()}
+          src={imageBuilder(i.image).width(440).height(300).fit('crop').url()}
           alt="Landscaping image"
-          layout="fill"
+          height={300}
+          width={440}
         />
-        <div className="absolute h-full w-full transition duration-200 ease-linear group-hover:bg-gray-100 group-hover:bg-opacity-5 group-hover:shadow-xl" />
-      </m.div>
+      </m.button>
       <AnimatePresence>
         {open && (
           <m.div
@@ -52,15 +52,16 @@ function Card({ i, idx }) {
             exit={{ opacity: 0, transition: { duration: 0.25 } }}
             transition={{ duration: 0.25, delay: 0.25 }}
             style={{ pointerEvents: 'auto' }}
-            style={{ pointerEvents: 'auto' }}
             ref={containerRef}
             onClick={() => handleShowModal(i, idx)}
             className="fixed top-0 left-0 right-0 bottom-0 z-50 bg-white bg-opacity-90"
           >
-            <m.div className="fixed left-1/2 top-16 z-20 h-5/6 w-full max-w-screen-lg -translate-x-1/2 transform rounded border-8 border-black text-white">
+            <m.div className="fixed top-1/2 left-1/2 z-20 h-1/2 w-2/3 max-w-screen-lg -translate-y-1/2 -translate-x-1/2 transform rounded border-8 border-black text-white  md:h-5/6">
               <Image
                 className="rounded object-cover"
-                src={urlFor(i.image).url()}
+                src={imageBuilder(i.image).url()}
+                height={750}
+                width={1000}
                 layout="fill"
               />
             </m.div>
@@ -71,4 +72,4 @@ function Card({ i, idx }) {
   )
 }
 
-export default Card
+export default GalleryCard

@@ -13,7 +13,7 @@ export default function Home({ home }) {
       <Hero content={hero} />
       <Services />
       <About content={about} />
-      {/* <Gallery content={gallery} /> */}
+      <Gallery content={gallery} />
       {/* <Testimonials limit={3} content={testimonials} /> */}
       {/* <Contact /> */}
     </>
