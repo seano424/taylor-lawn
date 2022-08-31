@@ -4,7 +4,7 @@ import { imageBuilder } from 'lib/client'
 
 function Hero({ content }) {
   return (
-    <div className="relative min-h-[800px] xl:min-h-[730px]">
+    <div className="relative min-h-[800px] xl:min-h-screen">
       <Image
         className="min-h-[1200px] w-full object-cover"
         alt="Hero Image"
