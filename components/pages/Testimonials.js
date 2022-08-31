@@ -11,11 +11,10 @@ function Testimonials({ content }) {
         <div className="absolute bottom-2 w-full border-b-[16px] border-emerald-300 border-opacity-90" />
       </div>
       <Swiper
-        modules={[Navigation, Pagination, A11y, Keyboard]}
+        modules={[Navigation, A11y, Keyboard]}
         keyboard={{ enabled: true }}
         spaceBetween={50}
         navigation
-        pagination={{ clickable: true }}
         className="mt-10"
       >
         {content.map((testimonial, idx) => (
