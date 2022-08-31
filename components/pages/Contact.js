@@ -6,6 +6,44 @@ import { FaClock, FaPhone, FaSearchLocation, FaMailBulk } from 'react-icons/fa'
 
 import Modal from '../Modal'
 
+const informationDetails = [
+  {
+    icon: <FaSearchLocation className="w-6 md:w-12" />,
+    title: 'Location',
+    subtitle: 'Merriam, Kansas',
+    link: {},
+  },
+  {
+    icon: <FaPhone className="w-6 md:w-12" />,
+    title: 'Call Us',
+    subtitle: '',
+    link: {
+      url: 'tel:+1-913-206-7214',
+      title: '(913) 206 7214',
+    },
+  },
+  {
+    icon: <FaMailBulk className="w-6 md:w-12" />,
+    title: '',
+    subtitle: '',
+    link: {
+      url: 'mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!',
+      title: 'Email Us!',
+    },
+  },
+  {
+    icon: <FaClock className="w-6 md:w-12" />,
+    title: 'Working Ours',
+    subtitle: '',
+    richText: (
+      <p>
+        M-F: 8am - 5pm <br /> Saturday: 10:30am - 2pm
+      </p>
+    ),
+    link: {},
+  },
+]
+
 function Contact() {
   const [value, setValue] = useState('')
   const [open, setOpen] = useState(false)
@@ -13,44 +51,34 @@ function Contact() {
     <>
       <Modal open={open} setOpen={setOpen} />
       <section className="py-base grid gap-10 bg-gray-50/25 text-emerald-700 lg:grid-cols-2 xl:px-36">
-        <div className="flex flex-col items-center gap-4 text-3xl font-black xl:text-5xl">
-          <h2>Contact details</h2>
-          <p className="text-base font-normal text-gray-600">
-            TXT or CALL for a free estimate today
-          </p>
-          <a className="font-serif" href="tel:+1-913-206-7214">
-            (913) 206 7214
-          </a>
-        </div>
-        <div className="my-5 mx-6 grid items-center gap-4 text-center text-lg sm:grid-cols-2 md:my-10 lg:m-12 lg:gap-10 lg:text-left">
-          <div className="flex flex-col items-center">
-            <FaSearchLocation className="w-6 md:w-12" />
-            <p>Location</p>
-            <p className="text-gray-600">Merriam, Kansas</p>
-          </div>
-          <div className=" flex flex-col items-center">
-            <FaPhone className="w-6 md:w-12" />
-            <p>Call Us</p>
-            <a className="text-gray-600" href="tel:+1-913-206-7214">
+        <div>
+          <div className="flex flex-col items-center gap-4 text-3xl font-black xl:text-5xl">
+            <h2>Contact details</h2>
+            <p className="text-base font-normal text-gray-600">
+              TXT or CALL for a free estimate today
+            </p>
+            <a className="font-serif" href="tel:+1-913-206-7214">
               (913) 206 7214
             </a>
           </div>
-          <div className="hidden flex-col items-center sm:flex">
-            <FaMailBulk className="w-6 md:w-12" />
-            <a
-              className="text-gray-600"
-              href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!"
-            >
-              Write to Us
-            </a>
-          </div>
-          <div className="flex flex-col items-center gap-1">
-            <FaClock className="w-6 md:w-12" />
-            <p>Working Hours</p>
-            <p className="text-gray-600">Monday - Friday:</p>
-            <span>8:00-5:00</span>
-            <p className="text-gray-600">Saturday:</p>
-            <span>10:30-2:00</span>
+          <div className="my-5 mx-auto grid max-w-sm items-center gap-10 text-center text-lg sm:max-w-lg sm:grid-cols-2 md:my-10 lg:m-12 lg:max-w-full lg:text-left">
+            {informationDetails.map((info) => (
+              <div key={info.title} className="flex flex-col items-center">
+                {info.icon}
+                {info.title && <p>{info.title}</p>}
+                {info.subtitle && (
+                  <p className="text-gray-600">{info.subtitle}</p>
+                )}
+                {info.link && (
+                  <a className="text-gray-600" href={info.link.url}>
+                    {info.link.title}
+                  </a>
+                )}
+                {info.richText && (
+                  <div className="text-center">{info.richText}</div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
         <Formik
