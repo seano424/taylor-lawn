@@ -10,11 +10,11 @@ function Hero({ content }) {
         alt="Hero Image"
         src={imageBuilder(content.image).width(1680).height(600).url()}
         width="1680"
-        height="600"
+        height="730"
         layout="fixed"
         priority
       />
-      <div className="absolute inset-0 border">
+      <div className="absolute inset-0">
         <div className="flex h-full flex-col items-center justify-center gap-5 text-center">
           <h1 className="h1">{content.title}</h1>
           <p className="h4">{content.subtitle}</p>
