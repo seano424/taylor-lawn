@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { imageBuilder } from 'lib/client'
 
 function Hero({ content }) {
+  console.log(content)
   return (
     <div className="relative min-h-[600px]">
       <Image
@@ -19,9 +20,9 @@ function Hero({ content }) {
           <h1 className="h1">{content.title}</h1>
           <p className="h4">{content.subtitle}</p>
           <div className="mx-10 flex flex-col justify-center gap-3 md:flex-row">
-            <Link href="/contact">
+            <Link href={content.cta.url ?? '/contact'}>
               <a className="button 5 transform bg-white text-emerald-700 shadow-2xl transition duration-300 hover:bg-emerald-700 hover:text-white">
-                Request an Estimate Today!
+                {content.cta.title ?? 'Request an Estimate Today!'}
               </a>
             </Link>
           </div>
