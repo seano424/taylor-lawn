@@ -39,7 +39,7 @@ const links = [
 function Header() {
   const { route } = useRouter()
   return (
-    <nav className="z-50 hidden w-full items-center gap-10 bg-white px-8 py-3 lg:flex 2xl:px-20">
+    <nav className="sticky top-0 left-0 z-50 hidden w-full items-center gap-10 bg-white px-8 py-3 lg:flex 2xl:px-20">
       {/* Logo*/}
       <Link href="/">
         <a aria-label="Logo To Homepage">
