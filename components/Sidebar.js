@@ -4,6 +4,8 @@ import useDimensions from '../hooks/use-dimension'
 import MenuToggle from './MenuToggle'
 import Navigation from './Navigation'
 import useOutsideClick from '../hooks/use-outside-click'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -36,7 +38,7 @@ const Sidebar = () => {
 
   return (
     <m.nav
-      className="nav absolute z-50 lg:hidden"
+      className="nav absolute inset-0 z-50 lg:hidden"
       initial={false}
       animate={open ? 'open' : 'closed'}
       custom={height}
@@ -48,6 +50,16 @@ const Sidebar = () => {
         toggle={() => setOpen((prevState) => !prevState)}
       />
       <MenuToggle toggle={() => setOpen((prevState) => !prevState)} />
+      <Link href="/">
+        <a aria-label="Logo To Homepage" className="fixed right-4 top-5">
+          <Image
+            className="cursor-pointer lg:hidden"
+            src="/images/logo.jpg"
+            height={50}
+            width={75}
+          />
+        </a>
+      </Link>
     </m.nav>
   )
 }

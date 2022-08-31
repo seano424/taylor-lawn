@@ -4,7 +4,7 @@
   }
 
   .py-base {
-    @apply py-16;
+    @apply py-24 lg:py-16;
   }
 
   .px-base {
