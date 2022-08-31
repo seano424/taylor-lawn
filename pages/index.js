@@ -14,7 +14,7 @@ export default function Home({ home }) {
       <Services />
       <About content={about} />
       <Gallery content={gallery} limit={6} />
-      {/* <Testimonials limit={3} content={testimonials} /> */}
+      <Testimonials limit={3} content={testimonials} />
       {/* <Contact /> */}
     </>
   )
