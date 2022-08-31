@@ -39,7 +39,7 @@ const links = [
 function Header() {
   const { route } = useRouter()
   return (
-    <nav className="sticky top-0 left-0 z-50 hidden w-full items-center gap-10 bg-white px-8 py-3 lg:flex 2xl:px-20">
+    <nav className="z-50 hidden w-full items-center gap-10 bg-white px-8 py-3 lg:flex 2xl:px-20">
       {/* Logo*/}
       <Link href="/">
         <a aria-label="Logo To Homepage">
@@ -75,13 +75,15 @@ function Header() {
                 taylorlawn@hotmail.com
               </a>
             </Link>
-            <div className="flex items-center gap-2">
-              <FaSearchLocation className="h-6" />
-              <span className="22xl:block hidden font-black">
-                Kansas City Metro Area
-              </span>
-              <span className="22xl:hidden font-black">KCMO</span>
-            </div>
+            <Link href="https://goo.gl/maps/w3Upyszi2aBZSDgi9">
+              <a target="_blank" className="flex items-center gap-2">
+                <FaSearchLocation className="h-6" />
+                <span className="hidden font-black 2xl:block">
+                  Kansas City Metro Area
+                </span>
+                <span className="font-black 2xl:hidden">Greater KC Area</span>
+              </a>
+            </Link>
             <Link href="https://www.facebook.com/TaylorLawnandLandscaping">
               <a rel="noopener" className="flex gap-2" target="_blank">
                 <FaFacebook className="h-6 w-6" />

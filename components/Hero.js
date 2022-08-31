@@ -3,16 +3,13 @@ import Image from 'next/image'
 import { imageBuilder } from 'lib/client'
 
 function Hero({ content }) {
-  console.log(content)
   return (
-    <div className="relative min-h-[600px]">
+    <div className="relative min-h-[800px] xl:min-h-[730px]">
       <Image
         className="min-h-[1200px] w-full object-cover"
         alt="Hero Image"
-        src={imageBuilder(content.image).width(1680).height(600).url()}
-        width="1680"
-        height="730"
-        layout="fixed"
+        src={imageBuilder(content.image).width(1680).height(730).url()}
+        layout="fill"
         priority
       />
       <div className="absolute inset-0">
