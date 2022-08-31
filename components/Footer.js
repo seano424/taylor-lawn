@@ -2,7 +2,7 @@ import { FaClock, FaPhone, FaSearchLocation, FaMailBulk } from 'react-icons/fa'
 
 function Footer() {
   return (
-    <footer className="flex flex-col flex-wrap justify-between gap-8 py-10 px-10 md:flex-row xl:px-20">
+    <footer className="py-base flex flex-col flex-wrap justify-between gap-8 px-10 md:flex-row xl:px-20">
       {/* Contact Us */}
       <article className="mb-6 flex flex-col md:w-80 lg:w-max xl:w-64">
         <h2 className="mb-6 text-2xl font-black">Contact Us</h2>

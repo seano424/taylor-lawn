@@ -1,7 +1,6 @@
 import { getHomePageContent } from 'lib/api'
 import Hero from '@/components/Hero'
 import Testimonials from '@/components/pages/Testimonials'
-import Contact from '@/components/pages/Contact'
 import Gallery from '@/components/pages/Gallery'
 import Services from '@/components/pages/Services'
 import About from '@/components/pages/About'
@@ -15,7 +14,6 @@ export default function Home({ home }) {
       <About content={about} />
       <Gallery content={gallery} limit={6} />
       <Testimonials limit={3} content={testimonials} />
-      {/* <Contact /> */}
     </>
   )
 }
