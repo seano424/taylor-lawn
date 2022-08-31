@@ -23,7 +23,7 @@ function Services() {
           Removal and Ice Management.
         </p>
         <Link href="/contact">
-          <a className="button w-max lg:text-3xl">Contact Us To Learn More</a>
+          <a className="button w-max 2xl:text-3xl">Contact Us To Learn More</a>
         </Link>
       </div>
       <div className="hidden grid-cols-2 gap-10 lg:grid">
