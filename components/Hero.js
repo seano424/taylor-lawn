@@ -20,11 +20,8 @@ function Hero({ content }) {
           <p className="h4">{content.subtitle}</p>
           <div className="mx-10 flex flex-col justify-center gap-3 md:flex-row">
             <Link href="/contact">
-              <a className="button">Contact us</a>
-            </Link>
-            <Link href="/contact">
-              <a className="button bg-white text-emerald-700 transition duration-300 hover:border-emerald-700 hover:bg-emerald-700 hover:text-white">
-                Request an Estimate
+              <a className="button 5 transform bg-white text-emerald-700 shadow-2xl transition duration-300 hover:bg-emerald-700 hover:text-white">
+                Request an Estimate Today!
               </a>
             </Link>
           </div>
