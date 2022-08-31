@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react'
-
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
   FaFacebook,
-  FaClock,
   FaPhone,
-  FaSearchLocation,
-  FaMailBulk,
 } from 'react-icons/fa'
 
 const links = [
@@ -39,15 +35,16 @@ const links = [
 ]
 
 function Header() {
-  const { route } = useRouter()
   const [scrollPosition, setScrollPosition] = useState(0)
+  const { route } = useRouter()
+
   const handleScroll = () => {
     const position = window.pageYOffset
     setScrollPosition(position)
   }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
-
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
@@ -55,10 +52,12 @@ function Header() {
 
   return (
     <nav
-      className={`backdrop-contrast-110 fixed top-0 left-0 z-50 hidden w-full items-center gap-10 bg-white px-8 pt-3 filter transition-all duration-300 ease-linear lg:flex 2xl:px-20 ${
-        scrollPosition > 50
-          ? 'bg-opacity-100 text-black'
-          : 'bg-opacity-0 text-white'
+      className={`backdrop-contrast-110 fixed top-0 left-0 z-50 hidden w-full items-center gap-10 bg-white px-8 py-3 filter transition-all duration-150 ease-in lg:flex 2xl:px-20 ${
+        route === '/'
+          ? scrollPosition > 50
+            ? 'bg-opacity-100 text-black'
+            : 'bg-opacity-0 text-white'
+          : 'bg-white bg-opacity-100 text-black'
       }`}
     >
       {/* Logo*/}
@@ -73,11 +72,12 @@ function Header() {
         </a>
       </Link>
 
+      {/* Navigation */}
       <div className="flex w-full flex-col">
         {/* Top Navigation */}
         <div
           className={`hidden w-full gap-8 border-b border-opacity-40 py-4 text-sm font-thin lg:flex 2xl:text-base ${
-            scrollPosition > 50 && 'text-emerald-500'
+            route === '/' && scrollPosition > 50 && 'text-emerald-500'
           }`}
         >
           <div className="flex w-full items-center justify-end  space-x-12">
@@ -98,14 +98,13 @@ function Header() {
             </Link>
           </div>
         </div>
-
         {/* Bottom Navigation */}
         <div className="relative hidden flex-1 items-center justify-between pt-6 font-serif text-lg lg:flex">
           {links.map((link) => (
             <Link key={link.title} href={link.url}>
               <a
                 className={`font-black ${
-                  scrollPosition > 50
+                  route === '/' && scrollPosition > 50
                     ? 'hover:text-slate-700'
                     : 'hover:text-slate-200'
                 }`}
