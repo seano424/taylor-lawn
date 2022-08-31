@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import GalleryCard from '../GalleryCard'
 import { m } from 'framer-motion'
+import Link from 'next/link'
 
-function Gallery({ content }) {
+function Gallery({ content, limit }) {
   const [images, setImages] = useState(content.images)
   const softscapes = content.images.filter((img) => img.softscape)
   const hardscapes = content.images.filter((img) => img.hardscape)
@@ -21,7 +22,7 @@ function Gallery({ content }) {
     },
   ]
   return (
-    <div className="relative mb-20 bg-slate-100 px-10 pt-10 pb-20">
+    <div className="py-base relative bg-slate-100 px-10">
       {/* Heading */}
 
       <div className="relative mx-4 md:mx-28 lg:mx-auto lg:w-max">
@@ -47,11 +48,19 @@ function Gallery({ content }) {
       {/* Gallery */}
       <div className="flex items-center gap-8">
         <m.div className="grid w-full gap-8 md:grid-cols-3">
-          {images.slice(0, 6).map((i, idx) => (
+          {images.slice(0, limit || images.length).map((i, idx) => (
             <GalleryCard key={i._key} i={i} idx={idx} />
           ))}
         </m.div>
       </div>
+
+      {limit && (
+        <div className="mt-10 flex justify-center">
+          <Link href="/gallery">
+            <a className="button">See More Of Our Work!</a>
+          </Link>
+        </div>
+      )}
     </div>
   )
 }

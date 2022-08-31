@@ -25,7 +25,8 @@ function GalleryCard({ i, idx }) {
   }
 
   return (
-    <>
+    <div>
+      {/* Individual Card Image */}
       <m.button
         aria-label="Gallery Images"
         variants={item}
@@ -43,6 +44,8 @@ function GalleryCard({ i, idx }) {
           width={440}
         />
       </m.button>
+
+      {/* LightShow */}
       <AnimatePresence>
         {open && (
           <m.div
@@ -68,7 +71,7 @@ function GalleryCard({ i, idx }) {
           </m.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )
 }
 
