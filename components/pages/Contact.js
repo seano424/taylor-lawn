@@ -24,7 +24,7 @@ const informationDetails = [
   },
   {
     icon: <FaMailBulk className="w-6 md:w-12" />,
-    title: '',
+    title: 'taylorlawn@hotmail.com',
     subtitle: '',
     link: {
       url: 'mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!',
