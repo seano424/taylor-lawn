@@ -1,4 +1,4 @@
-import { getAll } from 'lib/api'
+import { getHomePageContent } from 'lib/api'
 import Hero from '@/components/Hero'
 import Testimonials from '@/components/pages/Testimonials'
 import Gallery from '@/components/pages/Gallery'
@@ -20,7 +20,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps() {
-  const data = await getAll()
+  const data = await getHomePageContent()
   return {
     props: { data },
     revalidate: 60,
