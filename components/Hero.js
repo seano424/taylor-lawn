@@ -4,13 +4,12 @@ import { imageBuilder } from 'lib/client'
 
 function Hero({ content }) {
   return (
-    <div className="relative min-h-[600px] 2xl:h-[775px]">
+    <div className="relative min-h-[600px] 2xl:h-[700px]">
       <Image
         className="w-full object-cover"
         alt="Hero Image"
-        src={imageBuilder(content.image).width(1680).height(775).url()}
+        src={imageBuilder(content.image).url()}
         layout="fill"
-        priority
       />
       {/* Overlay, Text, & CTA */}
       <div className="absolute inset-0 bg-black/20">

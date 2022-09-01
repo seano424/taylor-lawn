@@ -9,7 +9,7 @@ function Layout({ children }) {
       <Meta />
       <Header />
       <Sidebar />
-      <main className={``}>{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   )
