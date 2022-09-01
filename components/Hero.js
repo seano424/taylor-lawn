@@ -12,7 +12,7 @@ function Hero({ content }) {
         layout="fill"
         priority
       />
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-black/20">
         <div className="py-base flex h-full flex-col items-center justify-center gap-5 text-center">
           <h1 className="h1">{content.title}</h1>
           <p className="h4">{content.subtitle}</p>
