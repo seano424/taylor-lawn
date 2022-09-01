@@ -14,7 +14,6 @@ function Hero({ content }) {
           layout="responsive"
           width={1680}
           height={775}
-          priority
         />
       </div>
 
@@ -27,7 +26,6 @@ function Hero({ content }) {
           layout="responsive"
           width={1140}
           height={970}
-          priority
         />
       </div>
 
@@ -40,7 +38,6 @@ function Hero({ content }) {
           layout="responsive"
           width={822}
           height={1200}
-          priority
         />
       </div>
       <div className="absolute inset-0">
