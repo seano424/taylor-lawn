@@ -5,8 +5,8 @@ import Gallery from '@/components/pages/Gallery'
 import Services from '@/components/pages/Services'
 import About from '@/components/pages/About'
 
-export default function Home({ home }) {
-  const { gallery, about, hero, testimonials } = home
+export default function Home({ data }) {
+  const { gallery, about, hero, testimonials } = data
 
   return (
     <>
@@ -20,9 +20,9 @@ export default function Home({ home }) {
 }
 
 export async function getStaticProps() {
-  const home = await getAll()
+  const data = await getAll()
   return {
-    props: { home },
+    props: { data },
     revalidate: 60,
   }
 }
