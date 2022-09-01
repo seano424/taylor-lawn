@@ -50,17 +50,6 @@ const Sidebar = () => {
         toggle={() => setOpen((prevState) => !prevState)}
       />
       <MenuToggle toggle={() => setOpen((prevState) => !prevState)} />
-      <Link href="/">
-        <a className="fixed right-4 top-4">
-          <Image
-            className="cursor-pointer lg:hidden"
-            src="/images/logo.jpg"
-            alt="Logo and Link To Homepage"
-            height={50}
-            width={80}
-          />
-        </a>
-      </Link>
     </m.nav>
   )
 }
