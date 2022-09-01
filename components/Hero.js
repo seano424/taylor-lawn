@@ -8,7 +8,8 @@ function Hero({ content }) {
       <Image
         className="w-full object-cover"
         alt="Hero Image"
-        src={imageBuilder(content.image).url()}
+        src="/images/hero.jpeg"
+        // src={imageBuilder(content.image).url()}
         layout="fill"
       />
       {/* Overlay, Text, & CTA */}
