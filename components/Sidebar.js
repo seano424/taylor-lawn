@@ -51,13 +51,13 @@ const Sidebar = () => {
       />
       <MenuToggle toggle={() => setOpen((prevState) => !prevState)} />
       <Link href="/">
-        <a className="fixed right-4 top-5">
+        <a className="fixed right-4 top-4">
           <Image
             className="cursor-pointer lg:hidden"
             src="/images/logo.jpg"
             alt="Logo and Link To Homepage"
-            height={80}
-            width={125}
+            height={50}
+            width={80}
           />
         </a>
       </Link>
