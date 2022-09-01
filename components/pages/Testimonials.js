@@ -2,6 +2,7 @@ import Testimonial from '../Testimonial'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, A11y, Keyboard } from 'swiper'
 function Testimonials({ content }) {
+  // console.log(content)
   return (
     <section name="testimonials" className="py-base flex flex-col gap-8">
       <div className="relative mx-4 md:mx-28 lg:mx-auto lg:w-max">

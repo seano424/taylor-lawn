@@ -1,8 +1,8 @@
 import { FaStar } from 'react-icons/fa'
 import SanityBlockContent from '@sanity/block-content-to-react'
 
-function Testimonial(item) {
-  const { headline, location, name, testimonial } = item.testimonial
+function Testimonial(props) {
+  const { headline, location, name, testimonial } = props.testimonial
   return (
     <section className="mx-auto flex max-w-5xl flex-col rounded-md text-center font-serif lg:mb-12">
       <div className="flex flex-col justify-center lg:h-40">

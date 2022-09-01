@@ -9,6 +9,6 @@ export async function getStaticProps() {
   const content = await getGallery()
   return {
     props: { content },
-    revalidate: 100000,
+    revalidate: 60,
   }
 }
