@@ -8,9 +8,10 @@ function Hero({ content }) {
       <Image
         className="w-full object-cover"
         alt="Hero Image"
-        src="/images/hero.jpeg"
-        // src={imageBuilder(content.image).url()}
+        // src="/images/hero.jpeg"
+        src={imageBuilder(content.image).url()}
         layout="fill"
+        priority
       />
       {/* Overlay, Text, & CTA */}
       <div className="absolute inset-0 bg-black/20">
