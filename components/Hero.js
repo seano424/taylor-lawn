@@ -4,42 +4,14 @@ import { imageBuilder } from 'lib/client'
 
 function Hero({ content }) {
   return (
-    <div className="relative">
-      <div className="hidden lg:block">
-        {/* Desktop */}
-        <Image
-          className="w-full object-contain"
-          alt="Hero Image"
-          src={imageBuilder(content.image).width(1680).height(775).url()}
-          layout="responsive"
-          width={1680}
-          height={775}
-        />
-      </div>
-
-      {/* Tablet */}
-      <div className="hidden sm:block lg:hidden">
-        <Image
-          className="w-full object-contain"
-          alt="Hero Image"
-          src={imageBuilder(content.image).width(1140).height(970).url()}
-          layout="responsive"
-          width={1140}
-          height={970}
-        />
-      </div>
-
-      {/* Mobile */}
-      <div className="sm:hidden">
-        <Image
-          className="w-full object-contain"
-          alt="Hero Image"
-          src={imageBuilder(content.image).width(822).height(1200).url()}
-          layout="responsive"
-          width={822}
-          height={1200}
-        />
-      </div>
+    <div className="relative min-h-[600px] 2xl:h-[775px]">
+      <Image
+        className="w-full object-cover"
+        alt="Hero Image"
+        src={imageBuilder(content.image).width(1680).height(775).url()}
+        layout="fill"
+        priority
+      />
       <div className="absolute inset-0">
         <div className="py-base flex h-full flex-col items-center justify-center gap-5 text-center">
           <h1 className="h1">{content.title}</h1>
