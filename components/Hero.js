@@ -12,6 +12,7 @@ function Hero({ content }) {
         layout="fill"
         priority
       />
+      {/* Overlay, Text, & CTA */}
       <div className="absolute inset-0 bg-black/20">
         <div className="py-base flex h-full flex-col items-center justify-center gap-5 text-center">
           <h1 className="h1">{content.title}</h1>

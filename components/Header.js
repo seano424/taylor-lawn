@@ -56,33 +56,26 @@ function Header() {
       <div className="flex w-full flex-col">
         {/* Top Navigation */}
         <div className="hidden w-full gap-8 border-b border-opacity-40 py-4 text-sm font-thin text-emerald-500 lg:flex 2xl:text-base">
-          <div className="flex w-full items-center justify-between  space-x-12">
-            <div className="flex items-center gap-2 text-black">
-              <FaPhone className="h-6" />
-              <a className="font-black 2xl:text-2xl" href="tel:+1-913-206-7214">
-                (913) 206 7214
-              </a>
-            </div>
-            <div className="hidden items-center gap-4 font-bold xl:flex">
-              <FaClock className="h-6 w-6" />
-              <div className="flex flex-col">
-                <p>Mon - Fri: 8:00-5:00</p>
-                <p>Sat: 10:30-2:00</p>
-              </div>
-            </div>
+          <div className="flex w-full items-center justify-end  space-x-8 2xl:space-x-16">
             <Link href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!">
-              <a className="flex items-center gap-2 font-bold text-black">
-                <FaMailBulk className="h-6" />
+              <a className="hidden items-center gap-2 font-bold text-black lg:text-xl xl:flex">
+                <FaMailBulk className="h-6 w-6" />
                 taylorlawn@hotmail.com
               </a>
             </Link>
             <Link href="https://goo.gl/maps/w3Upyszi2aBZSDgi9">
               <a target="_blank" className="flex items-center gap-2">
-                <FaSearchLocation className="h-6" />
-                <span className="hidden font-black 2xl:block">
+                <FaSearchLocation className="h-6 w-6" />
+                <span className="font-black lg:text-xl">
                   Kansas City Metro Area
                 </span>
-                <span className="font-black 2xl:hidden">Greater KC Area</span>
+              </a>
+            </Link>
+            <Link href="tel:+1-913-206-7214">
+              <a className="flex items-center gap-2 text-xl font-bold text-black xl:text-2xl">
+                <span className="xl:hidden 2xl:block">Call us today</span>
+                <FaPhone className="h-6 rotate-90 transform" />
+                (913) 206 7214
               </a>
             </Link>
             <Link href="https://www.facebook.com/TaylorLawnandLandscaping">
