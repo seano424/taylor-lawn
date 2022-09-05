@@ -1,8 +1,8 @@
 import 'styles/globals.css'
 import { ModalProvider } from 'context/ModalContext'
-import Layout from 'components/Layout'
-import { LazyMotion, domAnimation } from 'framer-motion'
 import 'swiper/css/bundle'
+import { LazyMotion, domAnimation } from 'framer-motion'
+import Layout from '@/components/Layout'
 
 function MyApp({ Component, pageProps }) {
   return (

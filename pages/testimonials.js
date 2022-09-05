@@ -1,5 +1,6 @@
 import { getTestimonials } from '../lib/api'
-import Testimonials from '../components/pages/Testimonials'
+import dynamic from 'next/dynamic'
+const Testimonials = dynamic(() => import('@/components/pages/Testimonials'))
 
 export default function Home({ testimonials }) {
   return <Testimonials content={testimonials} />

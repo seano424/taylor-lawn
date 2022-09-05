@@ -1,5 +1,6 @@
+import dynamic from 'next/dynamic'
 import { getGallery } from 'lib/api'
-import Gallery from '@/components/pages/Gallery'
+const Gallery = dynamic(() => import('@/components/pages/Gallery'))
 
 export default function Home({ content }) {
   return <Gallery content={content} />

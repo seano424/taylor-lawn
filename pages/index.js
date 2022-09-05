@@ -1,9 +1,10 @@
 import { getHomePageContent } from 'lib/api'
-import Hero from '@/components/Hero'
-import Testimonials from '@/components/pages/Testimonials'
-import Gallery from '@/components/pages/Gallery'
-import Services from '@/components/pages/Services'
-import About from '@/components/pages/About'
+import dynamic from 'next/dynamic'
+const Hero = dynamic(() => import('@/components/Hero'))
+const Testimonials = dynamic(() => import('@/components/pages/Testimonials'))
+const Gallery = dynamic(() => import('@/components/pages/Gallery'))
+const Services = dynamic(() => import('@/components/pages/Services'))
+const About = dynamic(() => import('@/components/pages/About'))
 
 export default function Home({ data }) {
   const { gallery, about, hero, testimonials } = data
