@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { getHomePageContent } from 'lib/api'
 import Hero from '@/components/Hero'
 import Testimonials from '@/components/pages/Testimonials'
@@ -7,6 +8,14 @@ import About from '@/components/pages/About'
 
 export default function Home({ data }) {
   const { gallery, about, hero, testimonials } = data
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect(() => {
+    data && setIsLoading(false)
+  }, [data])
+
+  if (isLoading) {
+    return <></>
+  }
 
   return (
     <>
