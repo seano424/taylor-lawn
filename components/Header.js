@@ -42,13 +42,14 @@ function Header() {
     <nav className="sticky top-0 left-0 z-50 hidden w-full items-center gap-10 bg-white px-8 py-3 lg:flex 2xl:px-20">
       {/* Logo*/}
       <Link href="/">
-        <a>
+        <a className="h-[135px] w-[210px]">
           <Image
             className="hidden cursor-pointer lg:flex"
             src="/images/logo.jpg"
             alt="Logo To Homepage"
-            height={161}
-            width={256}
+            height={268}
+            width={426}
+            layout="responsive"
           />
         </a>
       </Link>
