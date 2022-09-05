@@ -38,7 +38,7 @@ function Services() {
               height={100}
               width={100}
             />
-            <h4 className="w-48 pt-4 text-center text-xl">{item.heading}</h4>
+            <p className="w-48 pt-4 text-center text-xl">{item.heading}</p>
           </div>
         ))}
       </div>

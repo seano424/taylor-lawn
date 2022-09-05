@@ -55,7 +55,7 @@ function Header() {
 
       <div className="flex w-full flex-col">
         {/* Top Navigation */}
-        <div className="hidden w-full gap-8 border-b border-opacity-40 py-4 text-sm font-thin text-emerald-500 lg:flex 2xl:text-base">
+        <div className="hidden w-full gap-8 border-b border-opacity-40 py-4 text-sm font-thin text-emerald-700 lg:flex 2xl:text-base">
           <div className="flex w-full items-center justify-end  space-x-8 2xl:space-x-16">
             <Link href="mailto:taylorlawn@hotmail.com?subject=Hello Taylor Lawn and Landscaping!">
               <a className="hidden items-center gap-2 font-bold text-black lg:text-xl xl:flex">
@@ -64,7 +64,11 @@ function Header() {
               </a>
             </Link>
             <Link href="https://goo.gl/maps/w3Upyszi2aBZSDgi9">
-              <a target="_blank" className="flex items-center gap-2">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                className="flex items-center gap-2"
+              >
                 <FaSearchLocation className="h-6 w-6" />
                 <span className="font-black lg:text-xl">
                   Kansas City Metro Area
@@ -81,6 +85,7 @@ function Header() {
             <Link href="https://www.facebook.com/TaylorLawnandLandscaping">
               <a rel="noopener" className="flex gap-2" target="_blank">
                 <FaFacebook className="h-6 w-6" />
+                <span className="sr-only">Facebook</span>
               </a>
             </Link>
           </div>
@@ -92,15 +97,15 @@ function Header() {
             <Link key={link.title} href={link.url}>
               <a
                 className={`${
-                  route === link.url ? 'font-black text-emerald-500' : ''
-                } hover:text-emerald-500`}
+                  route === link.url ? 'font-black text-emerald-700' : ''
+                } hover:text-emerald-700`}
               >
                 {link.title}
               </a>
             </Link>
           ))}
           <Link href="/contact">
-            <a className="rounded-full bg-emerald-500 py-2 px-6 text-[15px] font-thin tracking-wide text-white">
+            <a className="rounded-full bg-emerald-700 py-2 px-6 text-[15px] font-thin tracking-wide text-white">
               Free Quote
             </a>
           </Link>
