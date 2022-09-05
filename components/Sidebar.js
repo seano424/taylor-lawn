@@ -4,8 +4,6 @@ import useDimensions from '../hooks/use-dimension'
 import MenuToggle from './MenuToggle'
 import Navigation from './Navigation'
 import useOutsideClick from '../hooks/use-outside-click'
-import Link from 'next/link'
-import Image from 'next/image'
 
 const sidebar = {
   open: (height = 1000) => ({
