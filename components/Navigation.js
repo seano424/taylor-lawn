@@ -31,7 +31,7 @@ const header = {
 const Navigation = ({ open, toggle }) => {
   return (
     <m.ul className={`menu-ul ${!open && 'hidden'}`} variants={variants}>
-      <Link href="/">
+      <Link href="/" passHref>
         <m.a
           variants={header}
           whileHover={{ scale: 1.1 }}
