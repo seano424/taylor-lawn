@@ -8,7 +8,7 @@ function Layout({ children }) {
     <div>
       <Meta />
       <Header />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <main>{children}</main>
       <Footer />
     </div>
